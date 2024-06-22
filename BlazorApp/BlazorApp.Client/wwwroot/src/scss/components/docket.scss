@@ -1,0 +1,271 @@
+.vt-docket {
+    max-width: 64rem;
+    margin: 3rem auto;
+    padding-left: $spacer;
+    padding-right: $spacer;
+
+    &__inner {
+        border: 1px solid $light-blue;
+        border-radius: 0.7rem;
+    }
+
+    &__header {
+        padding: $spacer;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: $spacer;
+
+        @include media-breakpoint-up(sm) {
+            padding: $spacer*2;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding: $spacer*2 $spacer*3;
+        }        
+    }
+
+    .vt-results{
+        text-align: center;
+    }
+
+    &__search{
+        width: 100%;
+    }
+    
+    &__form{
+        width: 100%;
+        
+        fieldset{
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacer $spacer*2;
+
+            @include media-breakpoint-up(xl) {
+                gap: 0 $spacer*4;
+            }
+        }
+
+        .js-advanced-search-toggle{
+            flex-basis: 100%;
+            text-align: left;
+
+            @include media-breakpoint-up(xl) {
+                text-align: right;
+            }
+        }        
+        
+        .vt-advanced-search{
+            width: 100%;
+        }
+
+        .js-advanced-search-clear{
+            padding-top: $spacer*0.5;
+        }
+    }
+
+    &__main-input{
+        flex-basis: 100%;
+
+        @include media-breakpoint-up(xl) {
+            flex-basis: auto;
+            flex: 1;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacer;
+    }
+
+    &__view{
+        display: none;
+        flex-basis: 23%;
+        @include media-breakpoint-up(xl) {
+            display: block;
+        }        
+    }
+
+    .vt-docket__actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: $spacer;
+
+        &--footer{
+            display: flex;
+            flex-direction: column;
+            margin-top: $spacer*1.5;
+        }
+    }
+
+    .vt-pagination{
+        display: flex;
+        flex-direction: column;
+        gap: $spacer*0.5;
+        font-weight: 300;
+    }
+
+    .vt-advanced-search{
+    
+        &__wrapper{
+            padding: $spacer;
+            margin: $spacer*1 0;
+            border-radius: 0.5rem;
+            display: grid;
+            gap: $spacer*1.5;
+            
+            @include media-breakpoint-up(md){
+                padding: $spacer*1.5;
+            }
+
+            @include media-breakpoint-up(lg){
+                padding: $spacer*2;
+            }
+    
+            .vt-input{
+
+                &.search-input-icon::after{
+                    bottom: 0.1em;
+                    right: 0.4em;
+                }
+            }        
+            
+            .vt-input-group{        
+                display: flex;
+                align-items: center;
+
+                @include media-breakpoint-up(sm){
+                    grid-column: span 6;
+                }
+            }
+        }
+    }    
+}
+
+.vt-docket-item {
+    padding: $spacer;
+    font-weight: 300;
+
+    @include media-breakpoint-up(sm) {
+        padding: $spacer $spacer*2;
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: flex;
+        gap: $spacer*1.5;
+
+        &__number {
+            flex-basis: 15%;
+        }
+        &__date {
+            flex-basis: 23%;
+        }
+        &__main {
+            flex-basis: 62%;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding: $spacer $spacer*3;
+    }
+
+    &:nth-of-type(odd) {
+        background-color: rgba($light-blue, 0.3);
+    }
+
+    &__date {
+        @include media-breakpoint-down(xl) {
+            margin-bottom: $spacer;
+        }
+    }
+
+    &__title{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    &__main {
+        a {
+            color: $darker-blue;
+            text-decoration: none;
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__related{
+        font-weight: 500;
+        margin-bottom: 0;
+        padding-top: $spacer*0.5;
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+}
+
+// Table View
+.vt-table-heading{
+    background: $black;
+    color: $white;
+    display: flex;
+    padding: 0.65rem $spacer*2;
+    border-radius: 0.5rem;
+    margin: 0 $spacer;
+    font-weight: 500;
+    gap: $spacer*1.5;
+    display: none;
+
+    &__number{
+        flex-basis: 7%;
+    }
+
+    &__name{
+        flex-basis: 83%;
+    }
+
+    &__date{
+        flex-basis: 10%;
+    }
+}
+
+.vt-docket__list{
+    &.vt-table-view{
+        @include media-breakpoint-up(xl) {
+            .vt-table-heading{
+                display: flex;
+            }       
+            
+            .vt-docket-item {
+                gap: $spacer*1.5;
+            
+                &__number {
+                    flex-basis: 7%;
+                }
+                &__date {
+                    flex-basis: 10%;
+                }
+                &__main {
+                    flex-basis: 83%;
+                }            
+        
+            
+                &__date {
+                    order: 3;
+                }
+            
+                &__label {
+                    display: none;
+                }
+            }            
+        }
+    }
+}

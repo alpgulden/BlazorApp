@@ -1,0 +1,140 @@
+.vt-documents {
+    max-width: 64rem;
+    margin: 3rem auto;
+    padding-left: $spacer;
+    padding-right: $spacer;
+
+    &__inner {
+        border: 1px solid $light-blue;
+        border-radius: 0.7rem;
+    }
+
+    &__header {
+        padding: $spacer*2;
+        display: grid;
+        gap: $spacer*2;
+
+        @include media-breakpoint-up(sm) {
+            padding: 2.5rem $spacer*2 1.5rem 3.25rem;
+        }
+        @media (min-width: 1350px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__buttons {
+        margin-top: -$spacer*0.5;
+        margin-left: -$spacer*0.5;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        @media (min-width: 1350px) {
+            justify-content: flex-end;
+        }
+
+        a {
+            margin: $spacer*0.5;
+        }
+    }
+
+    .vt-documents__actions {
+        grid-column: 1/-1;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: $spacer*2;
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: $spacer*2;
+        }
+    }
+    > .vt-documents__actions {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        margin-top: $spacer*2;
+        margin-bottom: $spacer*2;
+
+        .vt-results {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.vt-document {
+    padding: $spacer $spacer*2;
+
+    @include media-breakpoint-up(sm) {
+        padding: $spacer $spacer*2 $spacer 3.25rem;
+    }
+    @include media-breakpoint-up(xl) {
+        display: flex;
+        gap: $spacer*2;
+
+        &__number {
+            width: 13%;
+        }
+        &__date {
+            width: 16%;
+        }
+        &__main {
+            width: 52%;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        background-color: rgba($light-blue, 0.3);
+    }
+
+    &__date {
+
+        @include media-breakpoint-down(xl) {
+            margin-bottom: $spacer;
+        }
+    }
+    &__main {
+
+        a {
+            color: $darker-blue;
+            text-decoration: none;
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__title{
+        font-size: 1rem;
+    }
+
+    &__related{
+        font-weight: 600;
+
+        a{
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+
+        @include media-breakpoint-down(xl) {
+            margin-top: $spacer;
+        }
+
+        a {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+}

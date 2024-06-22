@@ -1,0 +1,26 @@
+.vt-breadcrumb{
+    padding-top: $spacer*1.5;
+
+    .breadcrumb-item{
+        a{
+            color: $black;
+            opacity: 0.5;
+            text-decoration: none;
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+
+        &.active{
+            font-weight: 700;
+            opacity: 1;
+            color: $black;
+
+            &::before{
+                font-weight: 400;
+            }
+        }
+    }
+}

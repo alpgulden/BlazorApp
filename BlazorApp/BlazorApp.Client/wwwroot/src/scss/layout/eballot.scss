@@ -1,0 +1,83 @@
+.vt-ballot-selection,
+.vt-ballot-detail{
+    .vt-case-banner{
+        padding: 0;
+        margin: 0;
+
+        &__inner{
+            margin: 0;
+        }
+    }
+}
+
+.vt-ballot-detail {
+    padding-bottom: $spacer*5;
+
+    .vt-section-wide__inner { padding: $spacer*2 $spacer*1.5; }
+
+    .vt-section-wide__inner > .vt-form {
+
+        > .vt-form__row,
+        > .vt-form__content {
+            max-width: 53rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .vt-form__content {
+
+        .display-3 {
+
+            @include media-breakpoint-up(xl){
+                font-size: 1.75rem;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    hr {
+        grid-column: span 12;
+        opacity: 1;
+        border-color: #EDF2FD;
+    }
+
+    &__form {
+        margin-top: $spacer*3;
+        background: linear-gradient(to bottom right, #C9E7F4, rgba(201, 231, 244, 0.4));
+        padding: $spacer*2;
+        border-radius: 0.7rem;
+
+        @media (min-width: 1040px){
+            padding: $spacer*5 $spacer*2;
+        }
+    }
+    &__form-inner {
+        max-width: 68rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $spacer*7;
+
+        > div:first-child {
+
+            @media (min-width: 1040px){
+                max-width: 24rem;
+            }
+        }
+        > div:last-child {
+            flex-grow: 1;
+        }
+    }
+}

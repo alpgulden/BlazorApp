@@ -1,0 +1,138 @@
+// Light
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-light-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-light-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-lightitalic-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-lightitalic-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-lightitalic-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+// Regular
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-regular-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-regular-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-regular-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-italic-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-italic-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-italic-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+// Medium
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-medium-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-medium-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-mediumitalic-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-mediumitalic-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-mediumitalic-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+// Bold
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-bold-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-bold-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-bold-webfont.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-bolditalic-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-bolditalic-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-bolditalic-webfont.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+// Extra Bold
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-extrabold-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-extrabold-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-extrabold-webfont.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-extrabolditalic-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-extrabolditalic-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-extrabolditalic-webfont.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+// Black
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-black-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-black-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-black-webfont.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sauce Two';
+    src: url('./font/opensauce/opensaucetwo-blackitalic-webfont.woff2') format('woff2'),
+        url('./font/opensauce/opensaucetwo-blackitalic-webfont.woff') format('woff'),
+        url('./font/opensauce/opensaucetwo-blackitalic-webfont.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+// Material Icons
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    src: url('./font/material-icons/material-rounded.woff2') format('woff2'),
+        url('./font/material-icons/material-rounded.ttf') format('truetype');
+}
+
+.material-icon {
+    font-family: 'Material Symbols Rounded';
+    font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' -25, 'opsz' 24;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    vertical-align: -0.3em;
+    direction: ltr;
+  }

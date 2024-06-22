@@ -1,0 +1,60 @@
+.vt-contact {
+    @extend .vt-wysiwyg;
+    margin-bottom: $spacer*5;
+
+    &__inner{
+        max-width: 56rem;
+        margin: 0 auto;
+    }
+
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10rem;
+        row-gap: $spacer;
+        margin-bottom: 0;
+        font-weight: 300;
+
+        dt { @extend .visually-hidden; }
+        dd { margin-bottom: $spacer; }
+
+        a {
+            color: var(--bs-body-color);
+            text-decoration: none;
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    &__phone,
+    &__email {
+        position: relative;
+        padding-left: $spacer*2.5;
+
+        &::before {
+            font-family: $font-icon;
+            content: 'phone_in_talk';
+            font-variation-settings: 'FILL' 1, 'opsz' 20;
+            font-size: 1.75em;
+            font-weight: 300;
+            color: $blue;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+    &__email::before {
+        content: 'mail';
+    }
+
+    &__form {
+        margin-top: $spacer*4;
+    }
+    .vt-form .vt-input {
+
+        @include media-breakpoint-up(lg) {
+            grid-column: span 9;
+        }
+    }
+}

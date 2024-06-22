@@ -1,0 +1,116 @@
+.vt-page-content{
+
+    @include media-breakpoint-up(lg) {
+        background: linear-gradient(to bottom right, #FFFFFF 20%, #EBF5FA);
+    }
+
+    &.no-bg{
+        @include media-breakpoint-up(lg) {
+            background: none;
+        }
+    }
+
+    &--epoc-full{
+        .vt-page-content__container{
+            grid-template-columns: 1fr;
+        }
+
+        .vt-sidebar{
+            display: none;
+        }
+
+        .vt-main .vt-footer{
+            width: 100%;
+            padding-left: 2rem;
+
+            .container--inner{
+                max-width: 90rem;
+            }
+        }
+    }
+
+    &__container{
+        display: grid;
+        align-items: flex-start;
+        gap: 0;
+        max-width: 90.5rem !important;
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 20rem 1fr;
+        }
+    }
+
+    .example-section{
+        min-height: 200vh;
+        background: white;
+    }
+}
+
+.vt-main{
+    position: relative;
+    z-index: 1;
+    min-width: 1px;
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacer;
+        padding-bottom: 0;
+    }
+
+    &__sections{
+        background: white;
+
+        @include media-breakpoint-up(lg) {
+            overflow: hidden;
+            //border: 1px solid $light-blue;
+            border-radius: 0.7rem;
+            box-shadow: 0 0 1.5rem transparentize($blue, 0.8);
+        }
+    }
+
+    .vt-footer{
+        margin-top: $spacer*2;
+
+        @include media-breakpoint-up(lg) {
+            width: calc(100% + $spacer);
+        }
+    }
+}
+
+// for pages that are shorter ie sign-in
+.vt-layout-full {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        > section { flex-grow: 1; }
+    }
+}
+
+.vt-section-wide {
+    background: linear-gradient(to bottom right, #FFFFFF 60%, #CEEBF5);
+    padding: $spacer*2;
+    position: relative;
+    z-index: 1;
+    margin-bottom: $spacer*-1;
+
+    &__inner {
+        background-color: $white;
+        border-radius: .7rem;
+        box-shadow: 0 0 1.5rem transparentize($mid-blue, 0.3);
+        padding: $spacer*2.5 $spacer*2.5 $spacer;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: $spacer*2;
+
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;        
+    }
+}

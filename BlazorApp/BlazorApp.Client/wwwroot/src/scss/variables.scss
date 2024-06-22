@@ -1,0 +1,119 @@
+// Default variable overrides
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px
+);
+
+$body-bg:     #FFFFFF;
+$body-color:  #07122D;
+
+$black:       #07122D;
+$white:       #FFFFFF;
+$darker-blue: #003B99;
+$dark-blue:   #2C5176;
+$blue:        #4BC1FF;
+$mid-blue:    #A4CBE0;
+$light-blue:  #C9E7F4;
+$lighter-blue:#EFF8FC;
+
+$link-color:  #003B99;
+$link-weight:   500;
+
+$font-family-sans-serif:    "Open Sauce Two", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:         "Open Sauce Two", Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:          $font-family-sans-serif;
+$font-icon:                 "Material Symbols Rounded";
+
+$enable-negative-margins: true;
+
+// Buttons
+$btn-font-size:         1rem;
+$btn-font-size-sm:      1rem;
+$btn-font-size-lg:      1rem;
+$btn-padding-y:         0.8em;
+$btn-padding-y-sm:      0.8em;
+$btn-padding-y-lg:      0.8em;
+$btn-padding-x:         2em;
+$btn-padding-x-sm:      2em;
+$btn-padding-x-lg:      2em;
+$btn-border-radius:     0.325em;
+$btn-border-radius-sm:  0.325em;
+$btn-border-radius-lg:  0.325em;
+$btn-disabled-opacity:  .65;
+
+
+// Headings
+$display-font-sizes: (
+  1: 3.75rem,
+  2: 3rem,
+  3: 2.25rem,
+  4: 1.375rem,
+  5: 1.25rem,
+  6: 1.125rem
+);
+$display-font-weight: 500;
+
+// Text
+$line-height-base:                  1.6;
+$line-height-sm:                    1.6;
+$line-height-lg:                    1.6;
+
+// Lead
+$lead-font-size:                    2.25rem;
+$lead-font-weight:                  400;
+
+// Focus Ring
+$focus-ring-width:                  .12rem;
+$focus-ring-opacity:                .4;
+$focus-ring-color:                  rgba($blue, $focus-ring-opacity);
+$focus-ring-blur:                   0;
+$focus-ring-box-shadow:             0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+
+// Forms
+$input-padding-y:                         0.5em;
+$input-padding-x:                         0.75em;
+$input-font-weight:                       300;
+$input-border-color:                    #CCD3E2;
+$input-border-radius:                     0.25rem;
+$input-border-radius-sm:                  0.25rem;
+$input-border-radius-lg:                  0.25rem;
+$form-label-margin-bottom:                0.75rem;
+$form-label-font-weight:                  700;
+
+$form-check-input-width:                  1.5em;
+$form-check-padding-start:                $form-check-input-width + 0.65em;
+
+// Checks
+$form-check-input-border:                 0.1em solid #BFBFBF;
+$form-check-input-checked-bg-color:       $black;
+$form-check-input-checked-border-color:   $black;
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$black}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
+
+// Radios
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$black}'/></svg>");
+
+// Select
+$form-select-indicator-color:             $blue;
+
+// Navbar Toggler
+$navbar-toggler-border-radius:      0;
+$navbar-toggler-focus-width:        0.1rem;
+$navbar-light-toggler-border-color: transparent;
+$navbar-dark-toggler-border-color:  transparent;
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='21.5' height='14.409' viewBox='0 0 21.5 14.409'><g transform='translate(16263 5661.5)'><line x2='19.5' transform='translate(-16262 -5660.5)' fill='none' stroke='#{$body-color}' stroke-linecap='round' stroke-width='2'/><line x2='19.5' transform='translate(-16262 -5654)' fill='none' stroke='#{$body-color}' stroke-linecap='round' stroke-width='2'/><line x2='19.5' transform='translate(-16262 -5648.091)' fill='none' stroke='#{$body-color}' stroke-linecap='round' stroke-width='2'/></g></svg>");
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='21.5' height='14.409' viewBox='0 0 21.5 14.409'><g transform='translate(16263 5661.5)'><line x2='19.5' transform='translate(-16262 -5660.5)' fill='none' stroke='#{$body-bg}' stroke-linecap='round' stroke-width='2'/><line x2='19.5' transform='translate(-16262 -5654)' fill='none' stroke='#{$body-bg}' stroke-linecap='round' stroke-width='2'/><line x2='19.5' transform='translate(-16262 -5648.091)' fill='none' stroke='#{$body-bg}' stroke-linecap='round' stroke-width='2'/></g></svg>");
+
+
+// Alerts
+$alert-padding-y:               0.6rem;
+$alert-padding-x:               1rem;
+$alert-margin-bottom:           1rem;
+$alert-border-radius:           0.3rem;
+$alert-link-font-weight:        500;
+$alert-border-width:            1px;
+$alert-dismissible-padding-r:   $alert-padding-x * 3;

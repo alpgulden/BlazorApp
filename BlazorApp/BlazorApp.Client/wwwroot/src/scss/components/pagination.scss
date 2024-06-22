@@ -1,0 +1,104 @@
+.vt-pagination {
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+        margin-bottom: 0;
+
+        display: flex;
+        align-items: center;
+
+        li:not(:last-child){
+            margin-right: 0.5rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .first,
+    .prev,
+    .next,
+    .last {
+        position: relative;
+        display: block;
+        width: 1.8em;
+        height: 1.8em;
+
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            height: 1.8em;
+            width: 1.8em;
+            position: absolute;
+            top: calc(50% - 0.9rem);
+        }
+        &::before {
+            background: $white;
+            border-radius: 0.25em;
+            border: 1px solid $blue;
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 0 2rem transparentize($blue, 1);
+        }
+
+        &:hover,
+        &:focus-visible{
+            &::before{
+                transform: scale(1.15);
+                box-shadow: 0 0 2rem transparentize($blue, 0.5);
+            }
+        }
+    }
+    .first::after,
+    .last::after {
+        background: url(./img/icon/chevron-double-dark.svg) center center no-repeat;
+        background-size: 0.8rem;
+    }
+    .prev::after,
+    .next::after {
+        background: url(./img/icon/chevron-dark.svg) center center no-repeat;
+        background-size: 0.4rem;
+    }
+    .next::after,
+    .last::after {
+        transform: rotate(180deg);
+    }
+
+    .current {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 1.5rem !important;
+        font-size: 0.8em;
+
+        
+        input {
+            width: 2.75em;
+            height: 2.75em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white;
+            border-radius: 0.25em;
+            border: 1px solid #CCD3E2;
+            margin-right: 0.5rem;
+            text-align: center;
+        }
+    }
+}
+
+.vt-items-per-page {
+
+    .vt-input {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: $spacer;
+
+        label { margin-bottom: 0; }
+        select { width: auto; }
+    }
+}

@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../site.webmanifest">
+	<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="../main.css">
+	<script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../swiper/swiper-bundle.min.js"></script>
+	<script src="../src/js/main.js"></script>
+	<title>Creditor/Claims Search Results - Verita Client Access</title>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header class="vt-header navbar navbar-toggler navbar-expand-lg sticky-top">
+		<div class="vt-header__top">
+			<div class="container-xxl">
+				<div class="container--inner">
+					<!-- Logo -->
+					<a href="/" class="vt-header__logo focus-ring">
+						<img src="../img/veritas-logo.png" alt="Verita">
+					</a>
+
+					<!-- Mobile Menu Toggle -->
+					<button class="vt-header__toggle navbar-toggler js-header-toggle" type="button"
+						data-bs-toggle="collapse" data-bs-target="#vt-navbar" aria-controls="vt-navbar"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<!-- Desktop Util -->
+					<div class="vt-header__util">
+                        <a href="/" class="vt-header__link vt-header__link--precedent">Verita Precedent</a>
+						<a href="/" class="vt-header__link">Client Login</a>
+						<a href="/" class="vt-header__link">Request Proposal</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Navigation -->
+		<div class="vt-header__navigation">
+			<div class="container-xxl g-0">
+				<div class="container--inner">
+					<div class="collapse navbar-collapse" id="vt-navbar" role="navigation">
+                        <a href="/" class="btn btn-arrow btn-arrow--back">Active Cases</a>
+                        <div class="vt-header__mobile-links">
+                            <a href="/" class="precedent">Verita Precedent</a>
+                            <a href="/">Client Login</a>
+                            <a href="/">Request Proposal</a>
+                        </div>
+						<ul class="navbar-nav vt-menu">
+                            <li><a href="/">Case home</a></li>
+                            <li><a href="/">Court Documents</a></li>
+                            <li><a href="/">Documents Search</a></li>
+                            <li><a href="/">Claims Reports</a></li>
+                            <li class="vt-menu-item--current"><a href="/">Claims/Creditor Search</a></li>
+                            <li><a href="/">Ballot Reports</a></li>
+                            <li><a href="/">Ballot Search</a></li>
+                            <li><a href="/">Email Pleading Notifications</a></li>
+                            <li><a href="/">Industry Links</a></li>
+                            <li><a href="/">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<div class="vt-page-content">
+        <div class="container--inner vt-page-content__container">
+            <aside class="vt-sidebar">
+                <div class="vt-sidebar__cta">
+                    <a href="/" class="btn btn-arrow btn-arrow--back">Active Cases</a>
+                </div>
+
+                <nav class="vt-sidebar__nav">
+                    <ul class="vt-menu">
+                        <li><a href="/">Case home</a></li>
+                        <li><a href="/">Court Documents</a></li>
+                        <li><a href="/">Documents Search</a></li>
+                        <li><a href="/">Claims Reports</a></li>
+                        <li class="vt-menu-item--current"><a href="/">Claims/Creditor Search</a></li>
+                        <li><a href="/">Ballot Reports</a></li>
+                        <li><a href="/">Ballot Search</a></li>
+                        <li><a href="/">Email Pleading Notifications</a></li>
+                        <li><a href="/">Industry Links</a></li>
+                        <li><a href="/">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="vt-main">
+
+                <div class="vt-main__sections">
+
+                    <section class="vt-case-banner vt-case-banner--simple">
+                        <div class="vt-case-banner__inner">
+                            <div class="vt-case-banner__content">
+                                <strong class="vt-case-banner__title">Achaogen, Inc.</strong>
+                                <span class="vt-case-banner__number">Case Number: 19-10844 (BLS)</span>
+                            </div>
+                        </div>
+                        <div class="vt-case-banner__nav d-block d-lg-none">
+                            <div class="vt-secondary-nav">
+                                <button class="vt-secondary-nav__toggle collapsed" 
+                                        type="button" 
+                                        data-bs-toggle="collapse"
+                                        aria-expanded="false"
+                                        data-bs-target="#secondaryNav"
+                                        aria-controls="secondaryNav">
+                                    Claims/Creditor Search
+                                </button>
+                                <ul class="vt-secondary-nav__menu vt-menu collapse" id="secondaryNav">
+                                    <li><a href="/">Case home</a></li>
+                                    <li><a href="/">Court Documents</a></li>
+                                    <li><a href="/">Documents Search</a></li>
+                                    <li><a href="/">Claims Reports</a></li>
+                                    <li class="vt-menu-item--current"><a href="/">Claims/Creditor Search</a></li>
+                                    <li><a href="/">Ballot Reports</a></li>
+                                    <li><a href="/">Ballot Search</a></li>
+                                    <li><a href="/">Email Pleading Notifications</a></li>
+                                    <li><a href="/">Industry Links</a></li>
+                                    <li><a href="/">Contact Us</a></li>
+                                </ul>
+                            </div>                          
+                        </div>
+                    </section>  
+
+                    <!-- TODO: rename? results is similar to a BK component -->
+                    <section class="vt-documents vt-claims-search-results">
+                        <div class="vt-documents__inner">
+                            <div class="vt-documents__header">
+                                <h1 class="display-3">Creditor/Claims Search Results</h1>
+
+                                <a href="/" class="btn btn-arrow btn-arrow--back mt-n-2 mt-n4 mb-n2 me-auto d-xl-none">Back to search</a>
+
+                                <div class="vt-documents__buttons">
+                                    <a href="/" class="btn btn-excel">Excel</a>
+                                    <a href="/" class="btn btn-download">Text</a>
+                                    <a href="/" class="btn btn-print">Print</a>
+                                </div>
+
+                                <div class="vt-documents__actions">
+                                    <div>
+                                        <a href="/" class="btn btn-arrow btn-arrow--back d-none d-xl-inline-block">Back to search</a>
+
+                                        <div class="vt-items-per-page">
+                                            <div class="vt-input">
+                                                <label for="itemsPerPage" class="form-label">Items per page</label>
+                                                <select class="form-select" id="itemsPerPage">
+                                                    <option value="100">100</option>
+                                                    <option value="200">200</option>
+                                                    <option value="300">300</option>
+                                                    <option value="400" selected>400</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="vt-results">
+                                        Showing 1—100 of 336 results
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="vt-claims-search-results__table">
+                                <div class="vt-sticky-table vt-sticky-table--claims-results">
+                                    <div class="vt-sticky-table__nav">
+                                        <button class="js-sticky-table-prev btn btn-arrow">
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="js-sticky-table-next btn btn-arrow">
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>                                    
+                                    <div class="vt-sticky-table__wrapper">
+                                        <table>
+                                            <caption class="visually-hidden">Claims Search Results</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>Date Filed</th>
+                                                    <th>Claim No.</th>
+                                                    <th>Creditor Name</th>
+                                                    <th>Notice Name</th>
+                                                    <th class="vt-sticky-table__address">Address</th>
+                                                    <th>Claim Amount</th>
+                                                    <th>Current or Pending Amount</th>
+                                                    <th>Schedule Amount</th>
+                                                    <th>Schedule</th>
+                                                    <th>Nature</th>
+                                                    <th>Debtor Name</th>
+                                                    <th>C</th>
+                                                    <th>U</th>
+                                                    <th>D</th>
+                                                    <th>Client State</th>
+                                                    <th>Claim Group</th>
+                                                    <th>Claim Type</th>
+                                                    <th>Reviewed by Client</th>
+                                                    <th>PDF</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Date Filed:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">05/05/1992</span>                                                            
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim No:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">4231</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Creditor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">EM Machines, Inc.</a></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Notice Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Address:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">
+                                                            8815 Anona Way<br>
+                                                            Orangevale, CA 95662
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">$1200.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Current or Pending Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">F</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Nature:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Debtor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">C:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">U:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">D:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client State:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Group:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client Type:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>                                                        
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Reviewed by Client:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">PDF:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">View</a></span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Date Filed:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">05/05/1992</span>                                                            
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim No:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">4231</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Creditor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">EM Machines, Inc.</a></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Notice Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Address:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">
+                                                            8815 Anona Way<br>
+                                                            Orangevale, CA 95662
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">$1200.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Current or Pending Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">F</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Nature:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Debtor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">C:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">U:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">D:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client State:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Group:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client Type:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>                                                        
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Reviewed by Client:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">PDF:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">View</a></span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Date Filed:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">05/05/1992</span>                                                            
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim No:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">4231</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Creditor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">EM Machines, Inc.</a></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Notice Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Address:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">
+                                                            8815 Anona Way<br>
+                                                            Orangevale, CA 95662
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">$1200.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Current or Pending Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">F</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Nature:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Debtor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">C:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">U:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">D:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client State:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Group:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client Type:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>                                                        
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Reviewed by Client:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">PDF:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">View</a></span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Date Filed:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">05/05/1992</span>                                                            
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim No:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">4231</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Creditor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">EM Machines, Inc.</a></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Notice Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Address:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">
+                                                            8815 Anona Way<br>
+                                                            Orangevale, CA 95662
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">$1200.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Current or Pending Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">F</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Nature:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Debtor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">C:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">U:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">D:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client State:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Group:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client Type:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>                                                        
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Reviewed by Client:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">PDF:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">View</a></span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Date Filed:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">05/05/1992</span>                                                            
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim No:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">4231</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Creditor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">EM Machines, Inc.</a></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Notice Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Address:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">
+                                                            8815 Anona Way<br>
+                                                            Orangevale, CA 95662
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">$1200.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Current or Pending Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule Amount:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Schedule:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">F</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Nature:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Debtor Name:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">C:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">U:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">D:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client State:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Claim Group:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Client Type:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>                                                        
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">Reviewed by Client:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value">0.00</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="vt-sticky-table__label">PDF:&nbsp;</span>
+                                                        <span class="vt-sticky-table__value"><a href="/">View</a></span>
+                                                    </td>                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- Footer -->
+                <footer class="vt-footer">
+                    <div class="container--inner">
+                        <a href="/" class="vt-footer__logo focus-ring">
+                            <img src="../img/veritas-logo-light.png" alt="Go to homepage">
+                        </a>
+                        <div class="vt-footer__social">
+                            <ul class="vt-social-links">
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/facebook.svg" alt="Go to Facebook"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/twitter.svg" alt="Go to Twitter"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/instagram.svg" alt="Go to Instagram"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/linkedin.svg" alt="Go to LinkedIn"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/youtube.svg" alt="Go to YouTube"></a></li>
+                            </ul>
+                        </div>
+                        <div class="vt-footer__util">
+                            <small class="vt-footer__copyright">&copy; Verita 2023</small>
+                            <nav class="vt-footer__navigation">
+                                <ul>
+                                    <li><a href="/" class="focus-ring">Terms &amp; Conditions</a></li>
+                                    <li><a href="/" class="focus-ring">Privacy Policy</a></li>
+                                    <li><a href="/" class="focus-ring">Sitemap</a></li>
+                                </ul>
+                            </nav>
+                            <small class="vt-footer__majortom">Launched by <a href="https://majortom.com" class="focus-ring">Major Tom</a></small>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

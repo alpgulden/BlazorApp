@@ -1,0 +1,26 @@
+.alert{
+    font-weight: 300;
+
+    &-danger{
+        background: #F5E3E6;
+        border-color: #E3655B;
+        color: $black;
+
+        strong{
+            font-weight: 600;
+        }
+
+        &::before{
+            font-family: $font-icon;
+            content: 'warning';
+            display: inline-block;
+            color: #DD3E33;
+            font-size: 1.65em;
+            line-height: 0.1;
+            font-weight: 400;
+            position: relative;
+            top: 0.3em;
+            margin-right: 0.5em;
+        }
+    }
+}

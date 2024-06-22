@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../site.webmanifest">
+	<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="../main.css">
+	<script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../swiper/swiper-bundle.min.js"></script>
+	<script src="../src/js/main.js"></script>
+	<title>ePOC Form - Verita Client Access</title>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header class="vt-header navbar navbar-toggler navbar-expand-lg sticky-top">
+		<div class="vt-header__top">
+			<div class="container-xxl">
+				<div class="container--inner">
+					<!-- Logo -->
+					<a href="/" class="vt-header__logo focus-ring">
+						<img src="../img/veritas-logo.png" alt="Verita">
+					</a>
+
+					<!-- Mobile Menu Toggle -->
+					<button class="vt-header__toggle navbar-toggler js-header-toggle" type="button"
+						data-bs-toggle="collapse" data-bs-target="#vt-navbar" aria-controls="vt-navbar"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>                    
+
+				</div>
+			</div>
+		</div>
+		<!-- Navigation -->
+		<div class="vt-header__navigation">
+			<div class="container-xxl g-0">
+				<div class="container--inner">
+					<div class="collapse navbar-collapse" id="vt-navbar" role="navigation">
+						<ul class="navbar-nav vt-menu js-epoc-form-nav"></ul>
+					</div>
+				</div>
+			</div>
+		</div>        
+	</header>
+
+	<!-- Main Content -->
+	<div class="vt-page-content">
+        <div class="container--inner vt-page-content__container">
+            <aside class="vt-sidebar">
+                <nav class="vt-sidebar__nav">
+                    <ul class="vt-menu js-epoc-form-nav"></ul>
+                </nav>
+            </aside>
+
+            <main class="vt-main">
+
+                <div class="vt-main__sections">
+
+                    <section class="vt-case-banner vt-case-banner--epoc">
+                        <div class="vt-case-banner__inner">
+                            <div class="vt-case-banner__content">
+                                <strong class="vt-case-banner__title">Troubled Waters, et al.</strong>
+                                <span class="vt-case-banner__number">Case Number: 19-10844</span>
+                            </div>
+
+                            <div class="vt-case-banner__info">
+                                <a href="/" target="_blank">Blank Proof of Claim Form with Instructions</a>
+                                <p>
+                                    For phone assistance:<br>
+                                    310-823-9000 (Domestic US)<br>
+                                    001-310-823-9000 (International)
+                                </p>
+                            </div>
+                        </div>
+                    </section>  
+
+                    <form class="vt-epoc-form vt-form">
+                        <div class="vt-epoc-form__steps">
+                            <div class="vt-epoc-form__step vt-epoc-step vt-epoc-step--active" vt-epoc-step-title="Creditor Info"> <!-- Step 1 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 1: Creditor Info</h2>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <p>Name and addressses where <u>notices</u> should be sent:</p>
+                                        </div>
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <label for="creditorName" class="form-label">
+                                                Name of the current creditor (the person or entity to be paid for this claim) 
+                                                <span class="form-label--required">(Required)</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="creditorName" placeholder="Please type here..." >
+                                        </div>
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <label for="careOf" class="form-label">Attention / In Care Of (c/o) (if different than above)</label>
+                                            <input type="text" class="form-control" id="careOf" placeholder="Please type here..." >
+                                        </div>
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--street-address">
+                                            <label for="streetAddress" class="form-label">Street Address <span class="form-label--required">(Required)</span></label>
+                                            <input type="text" class="form-control" id="streetAddress" placeholder="Please type here..." >
+                                            <label for="streetAddress2" class="form-label visually-hidden">Street Address Line 2</label>
+                                            <input type="text" class="form-control" id="streetAddress2">
+                                            <label for="streetAddress3" class="form-label visually-hidden">Street Address Line 3</label>
+                                            <input type="text" class="form-control" id="streetAddress3">                                            
+                                        </div>
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="city" class="form-label">City <span class="form-label--required">(Required)</span></label>
+                                            <input type="text" class="form-control" id="city" placeholder="Please type here..." >
+                                        </div>
+                                        <div class="vt-input vt-input--half">
+                                            <label for="region" class="form-label">State/Province/Region <span class="form-label--required">(Required)</span></label>
+                                            <input type="text" class="form-control" id="region" placeholder="Please type here..." >
+                                        </div>
+                                    </div>                                                                  
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="zipPostal" class="form-label">Zip/Postal Code <span class="form-label--required">(Required)</span></label>
+                                            <input type="text" class="form-control" id="zipPostal" placeholder="Please type here..." >
+                                        </div>
+                                        <div class="vt-input vt-input--half">
+                                            <label for="country" class="form-label">Country</label>
+                                            <input type="text" class="form-control" id="country" placeholder="Please type here..." >
+                                        </div>
+                                    </div>                                             
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="primaryPhone" class="form-label">Primary Phone</label>
+                                            <input type="text" class="form-control" id="primaryPhone" placeholder="Please type here..." >
+                                        </div>
+                                        <div class="vt-input vt-input--half">
+                                            <label for="secondaryPhone" class="form-label">Secondary Phone</label>
+                                            <input type="text" class="form-control" id="secondaryPhone" placeholder="Please type here..." >
+                                        </div>
+                                    </div>  
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="fax" class="form-label">Fax</label>
+                                            <input type="text" class="form-control" id="fax" placeholder="Please type here..." >
+                                        </div>
+                                    </div>                               
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="email" class="form-label">Email <span class="form-label--required">(Required)</span></label>
+                                            <input type="text" class="form-control" id="email" placeholder="Please type here..." >
+                                        </div>
+                                    </div>                     
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="visually-hidden">Different Address</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="differentAddress" id="differentAddress">
+                                                    <label class="form-check-label" for="differentAddress">Check this box if <u>payments</u> to the creditor should be sent to an address different from above</label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>  
+                                            
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Do you know anyone else who has filed a proof of claim for this claim? <span class="form-label--required">(Required)</span></legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="earlierFiling" id="earlierFilingNo" checked>
+                                                    <label class="form-check-label" for="earlierFilingNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="earlierFiling" id="earlierFilingYes">
+                                                    <label class="form-check-label" for="earlierFilingYes">Yes</label>
+                                                </div>
+                                            </div>                                       
+                                        </fieldset>
+                                    </div>  
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--disabled">
+                                            <label for="earlierFilers" class="form-label">Who made the earlier filing?</label>
+                                            <input type="text" class="form-control" id="earlierFilers" disabled placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>
+
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Additional Options</legend>
+                                            <div class="vt-check-group vt-check-group--vertical">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="isCreditor">
+                                                    <label class="form-check-label" for="isCreditor">Check this box if you are the creditor</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="isAgent">
+                                                    <label class="form-check-label" for="isAgent">Check this box if you are the creditor's attorney or authorized agent</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="isTrustee">
+                                                    <label class="form-check-label" for="isTrustee">Check this box if you are the trustee, or the debtor, or the authorized agent. (See Bankruptcy Rule 3004)</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="isGuarantor">
+                                                    <label class="form-check-label" for="isGuarantor">Check this box if you are the guarantor, surety, endorser, or the codebtor. (See Bankruptcy Rule 3004)</label>
+                                                </div>
+                                            </div>                                     
+                                        </fieldset>
+                                    </div>                                      
+
+                                </div>
+                            </div>
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Notice Party Info"> <!-- Step 2 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 2: Notice Party Info</h2>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="visually-hidden">Additional Notice Parties</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="additionalParties" id="additionalParties">
+                                                    <label class="form-check-label" for="additionalParties">Check this box if you have additional notice parties you would like notices to be sent</label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>  
+                                    <div class="vt-form__divider"></div>
+                                    <div class="vt-form__fieldgroup"> <!-- Show/Hide this element -->
+                                        <div class="vt-form__row">
+                                            <div class="vt-input">
+                                                <label for="noticePartyName" class="form-label">
+                                                    Name of Additional Notice Party
+                                                    <span class="form-label--required">(Required)</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="noticePartyName" placeholder="Please type here..." >
+                                            </div>
+                                        </div>
+                                        <div class="vt-form__row">
+                                            <div class="vt-input">
+                                                <label for="careOf" class="form-label">Attention / In Care Of (c/o) (if different than above)</label>
+                                                <input type="text" class="form-control" id="careOf" placeholder="Please type here..." >
+                                            </div>
+                                        </div>
+                                        <div class="vt-form__row">
+                                            <div class="vt-input vt-input--street-address">
+                                                <label for="streetAddress" class="form-label">Street Address <span class="form-label--required">(Required)</span></label>
+                                                <input type="text" class="form-control" id="streetAddress" placeholder="Please type here..." >
+                                                <label for="streetAddress2" class="form-label visually-hidden">Street Address Line 2</label>
+                                                <input type="text" class="form-control" id="streetAddress2">
+                                                <label for="streetAddress3" class="form-label visually-hidden">Street Address Line 3</label>
+                                                <input type="text" class="form-control" id="streetAddress3">                                            
+                                            </div>
+                                        </div>
+                                        <div class="vt-form__row">
+                                            <div class="vt-input vt-input--half">
+                                                <label for="city" class="form-label">City <span class="form-label--required">(Required)</span></label>
+                                                <input type="text" class="form-control" id="city" placeholder="Please type here..." >
+                                            </div>
+                                            <div class="vt-input vt-input--half">
+                                                <label for="region" class="form-label">State/Province/Region <span class="form-label--required">(Required)</span></label>
+                                                <input type="text" class="form-control" id="region" placeholder="Please type here..." >
+                                            </div>
+                                        </div>                                                                  
+                                        <div class="vt-form__row">
+                                            <div class="vt-input vt-input--half">
+                                                <label for="zipPostal" class="form-label">Zip/Postal Code <span class="form-label--required">(Required)</span></label>
+                                                <input type="text" class="form-control" id="zipPostal" placeholder="Please type here..." >
+                                            </div>
+                                            <div class="vt-input vt-input--half">
+                                                <label for="country" class="form-label">Country</label>
+                                                <input type="text" class="form-control" id="country" placeholder="Please type here..." >
+                                            </div>
+                                        </div>                                             
+                                        <div class="vt-form__row">
+                                            <div class="vt-input vt-input--half">
+                                                <label for="primaryPhone" class="form-label">Primary Phone</label>
+                                                <input type="text" class="form-control" id="primaryPhone" placeholder="Please type here..." >
+                                            </div>
+                                            <div class="vt-input vt-input--half">
+                                                <label for="secondaryPhone" class="form-label">Secondary Phone</label>
+                                                <input type="text" class="form-control" id="secondaryPhone" placeholder="Please type here..." >
+                                            </div>
+                                        </div>  
+                                        <div class="vt-form__row">
+                                            <div class="vt-input vt-input--half">
+                                                <label for="fax" class="form-label">Fax</label>
+                                                <input type="text" class="form-control" id="fax" placeholder="Please type here..." >
+                                            </div>
+                                        </div>                               
+                                        <div class="vt-form__row">
+                                            <div class="vt-input vt-input--half">
+                                                <label for="email" class="form-label">Email <span class="form-label--required">(Required)</span></label>
+                                                <input type="text" class="form-control" id="email" placeholder="Please type here..." >
+                                            </div>
+                                        </div>                     
+                                        <div class="vt-form__row">
+                                            <div class="vt-input">
+                                                <button type="button" class="btn btn-save">Save Notice Party</button>
+                                            </div>
+                                        </div>          
+                                    </div>    
+                                    
+                                    <div class="vt-form__fieldgroup"> <!-- Show/Hide this element -->
+                                        <div class="vt-edit-table">
+                                            <div class="vt-edit-table__header">
+                                                <strong>Name</strong>
+                                                <strong>Options</strong>
+                                            </div>
+                                            <div class="vt-edit-table__rows">
+                                                <div class="vt-edit-table-row">
+                                                    <div class="vt-edit-table-row__name">NP3</div>
+                                                    <div class="vt-edit-table-row__buttons">
+                                                        <button type="button" class="btn btn-outline">Edit</button>
+                                                        <button type="button" class="btn btn-danger">Delete</button>
+                                                    </div> 
+                                                </div>
+                                                <div class="vt-edit-table-row">
+                                                    <div class="vt-edit-table-row__name">NP2</div>
+                                                    <div class="vt-edit-table-row__buttons">
+                                                        <button type="button" class="btn btn-outline">Edit</button>
+                                                        <button type="button" class="btn btn-danger">Delete</button>
+                                                    </div> 
+                                                </div>
+                                                <div class="vt-edit-table-row">
+                                                    <div class="vt-edit-table-row__name">NP1</div>
+                                                    <div class="vt-edit-table-row__buttons">
+                                                        <button type="button" class="btn btn-outline">Edit</button>
+                                                        <button type="button" class="btn btn-danger">Delete</button>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>                       
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Amending/Acquiring Claim"> <!-- Step 3 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 3: Amending/Acquiring Claim</h2>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Does this claim amend one already filed? <span class="form-label--required">(Required)</span></legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimAmend" id="claimAmendNo" checked>
+                                                    <label class="form-check-label" for="claimAmendNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimAmend" id="claimAmendYes">
+                                                    <label class="form-check-label" for="claimAmendYes">Yes</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>
+                                    </div>  
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="claimNo" class="form-label">Claim number on court claims registry (if known)</label>
+                                            <input type="text" class="form-control" id="claimNo" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>                                    
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="filedOn" class="form-label">Filed on</label>
+                                            <input type="text" class="form-control" id="filedOn" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>     
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Has this claim been acquired from someone else? <span class="form-label--required">(Required)</span></legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="acquiredFromOther" id="acquiredFromOtherNo" checked>
+                                                    <label class="form-check-label" for="acquiredFromOtherNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="acquiredFromOther" id="acquiredFromOtherYes">
+                                                    <label class="form-check-label" for="acquiredFromOtherYes">Yes</label>
+                                                </div>
+                                            </div>                                         
+                                        </fieldset>
+                                    </div>                                                                     
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="acquiredFrom" class="form-label">Acquired from whom?</label>
+                                            <input type="text" class="form-control" id="acquiredFrom" aria-describedby="claimAcquiredFrom" placeholder="Please type here..." >
+                                        </div>                                        
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <p id="claimAcquiredFrom">
+                                                <em>If the claim has been acquired from someone else, 
+                                                then state the identity of the last party who owned the claim or was the holder 
+                                                of the claim and who transferred it to you before the initial claim was filed.</em>
+                                            </p>                                            
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>                       
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Other Information"> <!-- Step 4 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 4: Other Information</h2>
+                                    <p>What is the basis of the claim? Examples: Goods sold, money loaned, lease, services performed, 
+                                        personal injury or wrongful death, or credit card. Attach redacted copies of any documents 
+                                        supporting the claim required by Bankruptcy Rule 3001(c). Limit disclosing information 
+                                        that is entitled to privacy, such as health care information.</p>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="claimBasis" class="form-label">Claim basis</label>
+                                            <input type="text" class="form-control" id="claimBasis" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>                       
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Do you have any number you use to identify the debtor? <span class="form-label--required">(Required)</span></legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="debtorNumAvail" id="debtorNumAvailNo" checked>
+                                                    <label class="form-check-label" for="debtorNumAvailNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="debtorNumAvail" id="debtorNumAvailYes">
+                                                    <label class="form-check-label" for="debtorNumAvailYes">Yes</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>
+                                    </div>                                   
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="debtorAccountNo" class="form-label">Last four digits of the debtor's account or any number you use to identify the debtor
+                                            </label>
+                                            <input type="text" class="form-control" id="debtorAccountNo" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>     
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <p>A Proof of Claim form and any attached documents must show only the last 4 digits of any social security number, 
+                                                individual's tax identification number, or financial account number, 
+                                                and only the year of any person's date of birth. See Bankruptcy Rule 9037.</p>
+                                        </div>                                        
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="otherNames" class="form-label">Other names creditor used with the debtor</label>
+                                            <input type="text" class="form-control" id="otherNames" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>                                         
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <p>Uniform claim identifier for electronic payments in chapter 13 (if you use one). 
+                                                A uniform claim identifier is an optional 24-character identifier 
+                                                that some creditors use to facilitate electronic payment.</p>
+                                        </div>                                        
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="uciNum" class="form-label">Uniform Claim Identifier (optional)</label>
+                                            <input type="text" class="form-control" id="uciNum" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>                        
+                                </div>
+                            </div>                    
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Debtor Selection"> <!-- Step 5 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 5: Debtor Selection</h2>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <label for="debtors" class="form-label">Debtor against which this claim is asserted (Select only one debtor) <span class="form-label--required">(Required)</span></label>
+                                            <select class="form-select" id="debtors" size="5">
+                                                <option value="1">CC Distribution Company of Virginia, Inc.</option>
+                                                <option value="2">Abbott Advertising Agency, Inc.</option>
+                                                <option value="3">CC Aviation, LLC</option>
+                                            </select>
+                                        </div>
+                                    </div>                  
+                                </div>
+                            </div>                    
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Total Amount of Claim"> <!-- Step 6 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 6: Total Amount of Claim</h2>
+                                    <p>Fill in all the information about the claim as of the date the case was filed. 
+                                        Please reference the Blank Proof of Claim Form with Instructions when completing the Priority and Secured actions.</p>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="claimAmount" class="form-label">How much is the claim?</label>
+                                            <input type="text" class="form-control" id="claimAmount" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>            
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label">Does this amount include interest or other charges?</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimInterest" id="claimInterestNo" checked>
+                                                    <label class="form-check-label" for="claimInterestNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimInterest" id="claimInterestYes">
+                                                    <label class="form-check-label" for="claimInterestYes">Yes. Attach statement itemizing interest, fees, expenses, or other charges required by Bankruptcy Rule 3001(c)(2)(A)</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>
+                                    </div>       
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <p>If all or part of this claim is secured, complete the <strong>Secured Claim</strong> section to follow; 
+                                                however, if all of this claim is unsecured, do not complete the <strong>Secured Claim</strong> section.
+                                                <br>
+                                                <br>
+                                                If all or part of this claim is entitled to priority, complete the <strong>Priority Claim</strong>section to follow; 
+                                                however, if no part of this claim is entitled to priority, do not complete the <strong>Priority Claim</strong> section.
+                                            </p>                                            
+                                        </div>
+                                    </div>     
+                                </div>
+                            </div>             
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Amount of Secured Claim"> <!-- Step 7 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 7: Amount of Secured Claim</h2>
+                                    <p>Lobortis elementum nibh tellus molestie. Adipiscing diam donec adipiscing tristique risus nec. 
+                                        Auctor urna nunc id cursus metus aliquam eleifend. </p>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Is all or part of the claim entitled to priority under 11 U.S.C 507(a)?</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimEntitled" id="claimEntitledNo" checked>
+                                                    <label class="form-check-label" for="claimEntitledNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimEntitled" id="claimEntitledYes">
+                                                    <label class="form-check-label" for="claimEntitledYes">
+                                                        Yes. The claim is secured on lien policy. <span class="form-label--required">(Amount of secure claim is required before continuing)</span>
+                                                    </label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Nature of Property:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="natureOfProperty" id="natureOfProperty1" checked>
+                                                    <label class="form-check-label" for="natureOfProperty1">Real Estate</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="natureOfProperty" id="natureOfProperty2">
+                                                    <label class="form-check-label" for="natureOfProperty2">Motor Vehicle</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="natureOfProperty" id="natureOfProperty3">
+                                                    <label class="form-check-label" for="natureOfProperty3">Other</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                    </div>    
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <label for="claimDescribe" class="form-label">Describe</label>
+                                            <input type="text" class="form-control" id="claimDescribe" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>                                                                      
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="propertyValue" class="form-label">Value of Property</label>
+                                            <input type="text" class="form-control" id="propertyValue" placeholder="Please type here..." >
+                                        </div>               
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="amountNecessary" class="form-label">Amount Necessary</label>
+                                            <input type="text" class="form-control" id="amountNecessary" placeholder="Please type here..." >
+                                        </div>               
+                                    </div>                                                              
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--icon-percent">
+                                            <label for="annualInterest" class="form-label">Annual Interest Rate</label>
+                                            <input type="text" class="form-control" id="annualInterest" placeholder="Please type here..." >
+                                        </div>               
+                                        <div class="vt-input vt-input--half align-self-end">
+                                            <fieldset class="vt-input-group">
+                                                <legend class="visually-hidden">Fixed or variable interest rate</legend>
+                                                <div class="vt-check-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="interestRate" id="fixedInterest" checked>
+                                                        <label class="form-check-label" for="fixedInterest">Fixed</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="interestRate" id="variableInterest">
+                                                        <label class="form-check-label" for="variableInterest">Variable</label>
+                                                    </div>
+                                                </div>    
+                                            </fieldset>  
+                                        </div>               
+                                    </div>  
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <label for="basisPerf" class="form-label">Basis for Perfection. Attach redacted copies of documents, if any, that show evidence of perfection of a
+                                                security interest (for example, a mortgage, lien, certificate, financing statement, or other document that
+                                                shows the lien has been filed or recorded.)</label>
+                                            <input type="text" class="form-control" id="basisPerf" placeholder="Please type here..." >
+                                        </div>               
+                                    </div>   
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="amountSecured" class="form-label">Amount of the claim that is secured</label>
+                                            <input type="text" class="form-control" id="amountSecured" placeholder="Please type here..." >
+                                        </div>               
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="amountUnsecured" class="form-label">Amount of the claim that is unsecured</label>
+                                            <input type="text" class="form-control" id="amountUnsecured" placeholder="Please type here..." >
+                                        </div>               
+                                    </div>      
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Is this claim based on a lease?</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="leaseBased" id="leaseBasedNo" checked>
+                                                    <label class="form-check-label" for="leaseBasedNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="leaseBased" id="leaseBasedYes">
+                                                    <label class="form-check-label" for="leaseBasedYes">Yes</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>       
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="leaseAmount" class="form-label">If yes, enter amount</label>
+                                            <input type="text" class="form-control" id="leaseAmount" placeholder="Please type here..." >
+                                        </div>               
+                                    </div>  
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend for="leaseAmount" class="form-label">Is this claim subject to a right setoff?</legend>
+                                            <p class="vt-input__note">A setoff occurs when a creditor pays itself with money belonging to the debtor that is holding, 
+                                                or cancelling a debt it owes to the debtor.</p>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="rightSetoff" id="rightSetoffNo" checked>
+                                                    <label class="form-check-label" for="rightSetoffNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="rightSetoff" id="rightSetoffYes">
+                                                    <label class="form-check-label" for="rightSetoffYes">Yes</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>   
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="propertyID" class="form-label">If yes, identify property</label>
+                                            <input type="text" class="form-control" id="propertyID" placeholder="Please type here..." >
+                                        </div>               
+                                    </div>                                      
+                                </div>
+                            </div>             
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Amount of Priority Claim"> <!-- Step 8 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 8: Amount of Priority Claim</h2>
+                                    <p><strong>Priority Claim:</strong> Lobortis elementum nibh tellus molestie. Adipiscing diam donec adipiscing tristique risus nec. 
+                                        Auctor urna nunc id cursus metus aliquam eleifend. </p>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Is all or part of the claim entitled to priority under 11 U.S.C 507(a)? <span class="form-label--required">(Required)</span></legend>
+                                            <p class="vt-input__note">A claim may be partly priority and partly non priority. For example, in some categories, the law limits the amount entitled to priority.</p>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimPriority" id="claimPriorityNo" checked>
+                                                    <label class="form-check-label" for="claimPriorityNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimPriority" id="claimPriorityYes">
+                                                    <label class="form-check-label" for="claimPriorityYes">
+                                                        Yes. Check all that apply: <span class="form-label--required">(Category and amount is required before continuing)</span>
+                                                    </label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>
+                                    <div class="vt-form__row d-block d-sm-none">
+                                        <p><strong>Specify the Priority of the claim and the Amount entitled to priority:</strong></p>
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label d-none d-sm-block">Specify the priority claim:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="claimPriority1">
+                                                    <label class="form-check-label" for="claimPriority1">Domestic support obligations (including alimony and child support) under 11 U.S.C. 507(a)(1)(A) or (a)(1)(B)</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar align-self-start">
+                                            <label for="amountEntitled" class="form-label d-none d-sm-block">Amount Entitled to Priority</label>
+                                            <input type="text" class="form-control" id="amountEntitled" placeholder="Please type here..." >
+                                        </div> 
+                                    </div> 
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label visually-hidden">Specify the priority claim:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="claimPriority2">
+                                                    <label class="form-check-label" for="claimPriority2">Up to $3,025* of deposits toward purchase, lease, or rental property. 11 U.S.C. 507(a)(7)</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar align-self-start">
+                                            <label for="amountEntitled" class="form-label visually-hidden">Amount Entitled to Priority</label>
+                                            <input type="text" class="form-control" id="amountEntitled" placeholder="Please type here..." >
+                                        </div> 
+                                    </div>                                        
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label visually-hidden">Specify the priority claim:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="claimPriority3">
+                                                    <label class="form-check-label" for="claimPriority3">Wages, salaries, or commissions (up to $12,475*) earned within 180 days 
+                                                        before the bankruptcy petition is filed or the debtor's business ends, whichever is earlier. 11 U.S.C. 507(a)(4)</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar align-self-start">
+                                            <label for="amountEntitled" class="form-label visually-hidden">Amount Entitled to Priority</label>
+                                            <input type="text" class="form-control" id="amountEntitled" placeholder="Please type here..." >
+                                        </div> 
+                                    </div>                                        
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label visually-hidden">Specify the priority claim:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="claimPriority4">
+                                                    <label class="form-check-label" for="claimPriority4">Taxes or penalties owed by governmental units. 11 U.S.C. 507(a)(5)</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar align-self-start">
+                                            <label for="amountEntitled" class="form-label visually-hidden">Amount Entitled to Priority</label>
+                                            <input type="text" class="form-control" id="amountEntitled" placeholder="Please type here..." >
+                                        </div> 
+                                    </div>                                        
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label visually-hidden">Specify the priority claim:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="claimPriority5">
+                                                    <label class="form-check-label" for="claimPriority5">Contributions to an employee benefit plan. 11 U.S.C. 507(a)(5)</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar align-self-start">
+                                            <label for="amountEntitled" class="form-label visually-hidden">Amount Entitled to Priority</label>
+                                            <input type="text" class="form-control" id="amountEntitled" placeholder="Please type here..." >
+                                        </div> 
+                                    </div>                                        
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group vt-input-group--half">
+                                            <legend class="form-label visually-hidden">Specify the priority claim:</legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="claimPriority6">
+                                                    <label class="form-check-label" for="claimPriority6">
+                                                        Other. Specify subsection of 11 U.S.C 507(a)(<input type="text" class="form-control mx-1 d-inline" style="width: 30px; height:30px; padding: 5px" id="amountEntitled" >) that applies.
+                                                    </label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>  
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar align-self-start">
+                                            <label for="amountEntitled" class="form-label visually-hidden">Amount Entitled to Priority</label>
+                                            <input type="text" class="form-control" id="amountEntitled" placeholder="Please type here..." >
+                                        </div> 
+                                    </div>     
+                                    
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <p><em>* Amounts are subject to adjustment on 4/01/24 and every 3 years after that for cases began or after the date of adjustment.</em></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Amount of Secured Claim"> <!-- Step 9 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 9: Amount of 503(b)(9) Claim</h2>
+                                    <p><strong>Claim Pursuant to 11 U.S.C. 503(b)(9):</strong> Lobortis elementum nibh tellus molestie. 
+                                        Adipiscing diam donec adipiscing tristique risus nec. Auctor urna nunc id cursus metus aliquam eleifend. 
+                                        Lorem sed risus ultricies tristique nulla aliquet enim tortor at. 
+                                        Nunc consequat interdum varius sit amet mattis vulputate enim. 
+                                        Posuere lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Do you have a claim arising from the value of any goods received by the Debtor 
+                                                within 20 days before the date of commencement of the above case?? <span class="form-label--required">(Required)</span></legend>
+                                            <div class="vt-check-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimEntitled" id="claimEntitledNo" checked>
+                                                    <label class="form-check-label" for="claimEntitledNo">No</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="claimEntitled" id="claimEntitledYes">
+                                                    <label class="form-check-label" for="claimEntitledYes">
+                                                        Yes. The claim is secured by on lien policy. <span class="form-label--required">(Amount is required before continuing)</span>
+                                                    </label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>   
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half vt-input--icon-dollar">
+                                            <label for="amount" class="form-label">Amount</label>
+                                            <input type="text" class="form-control" id="amount" placeholder="Please type here..." >
+                                        </div>                                        
+                                    </div>                               
+                                </div>
+                            </div>
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Supporting Documentation"> <!-- Step 10 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 10: Supporting Documentation</h2>
+                                    <p>Upload to this electronic proof of claim redacted copies of any documents that show that the debt exists, 
+                                        a lien secures the debt, or both. Also attach redacted copies of any documents that show perfection of 
+                                        any security interest or any assignments or transfers of the debt. In addition to the documents, a summary may be added. 
+                                        Federal Rule of Bankruptcy Procedure (called “Bankruptcy Rule”) 3001(c) and (d).</p>
+                                    <p>Redaction of information is masking, editing out, or deleting certain information to protect privacy. 
+                                        Filers must redact or leave out information entitled to privacy on the Proof of Claim form and any attached documents.</p>
+                                    <p>Do not attach original documents because attachments may be destroyed after scanning.</p>
+                                    <p>If the claim is based on delivering health care goods or services, do not disclose confidential health care information. 
+                                        Leave out or redact confidential information both in the claim and in the attached documents.</p>
+                                    <p>IMPORTANT NOTICE OF REDACTION RESPONSIBILITY: Filers must leave out or redact information that is entitled 
+                                        to privacy on this form or on any attached documents. A Proof of Claim form and any attached documents must 
+                                        show only the last 4 digits of any social security number, individual's tax identification number, 
+                                        or financial account number, and only the year of any person's date of birth. See Bankruptcy Rule 9037. 
+                                        For a minor child, fill in only the child's initials and the full name and address of the child's parent or guardian. 
+                                        For example, write A.B., a minor child (John Doe, parent, 123 Main St., City, State). See Bankruptcy Rule 9037.</p>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="form-label">Select the following supporting documentation method:</legend>
+                                            <div class="vt-check-group vt-check-group--vertical">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="availDocumentation" id="availDocumentationNo" checked>
+                                                    <label class="form-check-label" for="availDocumentationNo">I have no supporting documentation.</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="availDocumentation" id="availDocumentationYes">
+                                                    <label class="form-check-label" for="availDocumentationYes">I have supporting documentation and am ready to upload it.</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="availDocumentation" id="availDocumentationNoUpload">
+                                                    <label class="form-check-label" for="availDocumentationNoUpload">I have supporting documentation, but cannot upload it.</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>   
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <p>The following restrictions apply to uploading supporting documents:</p>
+                                            <ul>
+                                                <li>File Format: Adobe Acrobat (PDF) DRM Free</li>
+                                                <li>Maximum File Size of Individual Files: 5MB</li>
+                                                <li>Maximum Combined File Size of All Files: 20MB</li>
+                                                <li>Maximum Number of Files Uploaded: 5</li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <p>To complete the filing of this claim, attach a copy of Claim Filing lobortis elementum nibh tellus mole.</p>
+                                            <p>Troubled Waters Claims Processing Center<br>
+                                                c/o Verita<br>
+                                                2335 Alaska Avenue<br>
+                                                El Segundo, CA 90245</p>
+                                            <p>The Claim Filing Summary lobortis elementum nibh tellus mole.</p>
+                                        </div>                                        
+                                    </div>                                        
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <label for="fileUpload" class="visually-hidden">Upload File</label>
+                                            <input type="file" class="form-control" id="fileUpload" >
+                                        </div>
+                                    </div>                          
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <div class="alert alert-danger" role="alert">
+                                                <strong>WARNING:</strong> Please review all documents after upload lobortis elementum nibh tellus molestie.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input">
+                                            <div class="vt-edit-table vt-edit-table--uploads">
+                                                <div class="vt-edit-table__header">
+                                                    <strong>Upload Documents (0.02MB)</strong>
+                                                </div>
+                                                <div class="vt-edit-table__rows">
+                                                    <div class="vt-edit-table-row">
+                                                        <div class="vt-edit-table-row__name">
+                                                            1. <a href="/">Test.pdf</a>
+                                                        </div>
+                                                        <div class="vt-edit-table-row__buttons">
+                                                            <button type="button" class="btn btn-danger">Delete</button>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="vt-edit-table-row">
+                                                        <div class="vt-edit-table-row__name">
+                                                            2. <a href="/">Test-Second.pdf</a>
+                                                        </div>
+                                                        <div class="vt-edit-table-row__buttons">
+                                                            <button type="button" class="btn btn-danger">Delete</button>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>      
+                                        </div>                                  
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <p>
+                                                <em>Attach redacted copies of any document lobortis elementum nibh tellus molestie.
+                                                 Adipiscing diam donec adipiscing tristique risus nec. Auctor urna nunc id cursus metus aliquam eleifend.</em>
+                                            </p>                                            
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vt-epoc-form__step vt-epoc-step" vt-epoc-step-title="Sign and Submit Claim"> <!-- Step 11 -->
+                                <div class="vt-epoc-step__intro">
+                                    <h2 class="display-3">Step 10: Sign and Submit Claim</h2>
+                                    <p>Lobortis elementum nibh tellus molestie. Adipiscing diam donec adipiscing tristique risus nec. 
+                                        Auctor urna nunc id cursus metus aliquam eleifend. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. 
+                                        Nunc consequat interdum varius sit amet mattis vulputate enim. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                                    <div class="vt-legal-scroll">
+                                        <p>Terms of Use</p>
+                                        <p>IMPORTANT! PLEASE READ THE FOLLOWING TERMS OF USE CAREFULLY. By using or accessing the ePOC system web site and any pages thereof (collectively, the “Site”) you:</p>
+                                        <p>Acknowledge that you have read the following Terms of Use;<br>
+                                        Agree to these Terms of Use and to any rules and policies we publish on the Site; and<br>
+                                        Certify that you are at least 18 years of age, and that, if you are acting on behalf of another person, you are authorized to do so, including to contractually bind the person.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="vt-epoc-step__fields">
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="visually-hidden">Agreements</legend>
+                                            <div class="vt-check-group vt-check-group--vertical">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="understand">
+                                                    <label class="form-check-label" for="understand">I understand lorem lobortis elementum nibh tellus molestie. Adipiscin adipiscing tristique. <span class="form-label--required">(Required)</span></label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="declare">
+                                                    <label class="form-check-label" for="declare">I declare lorem lobortis elementum nibh tellus molestie. Adipiscing diam donec adipiscing tristique.</label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>   
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="nameSignature" class="form-label">Name (Signature) <span class="form-label--required">(Required)</span></label>
+                                            <input type="text" class="form-control" id="nameSignature" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="title" class="form-label">Title</label>
+                                            <input type="text" class="form-control" id="title" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <div class="vt-input vt-input--half">
+                                            <label for="company" class="form-label">Company</label>
+                                            <input type="text" class="form-control" id="company" placeholder="Please type here..." >
+                                        </div>                                             
+                                    </div>
+                                    <div class="vt-form__row">
+                                        <fieldset class="vt-input-group">
+                                            <legend class="visually-hidden">Different Address</legend>
+                                            <div class="vt-check-group vt-check-group--vertical">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="differentAddress">
+                                                    <label class="form-check-label" for="differentAddress">Check this box if the notice address is different from the above address.</span></label>
+                                                </div>
+                                            </div>    
+                                        </fieldset>                                        
+                                    </div>                                       
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vt-epoc-form__nav">
+                            <button type="button" class="btn btn-outline vt-epoc-form__prev js-epoc-prev" disabled onclick="verita.ePOCForm.prev()">Previous</button>
+                            <button type="button" class="btn btn-save vt-epoc-form__save js-epoc-save"><span>Save & Exit</span></button>
+                            <button type="button" class="btn btn-primary vt-epoc-form__next js-epoc-next" onclick="verita.ePOCForm.next()">Next</button>
+                            <button type="button" class="btn btn-primary vt-epoc-form__submit js-epoc-submit" disabled>Submit claim</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- Footer -->
+                <footer class="vt-footer">
+                    <div class="container--inner">
+                        <a href="/" class="vt-footer__logo focus-ring">
+                            <img src="../img/veritas-logo-light.png" alt="Go to homepage">
+                        </a>
+                        <div class="vt-footer__social">
+                            <ul class="vt-social-links">
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/facebook.svg" alt="Go to Facebook"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/twitter.svg" alt="Go to Twitter"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/instagram.svg" alt="Go to Instagram"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/linkedin.svg" alt="Go to LinkedIn"></a></li>
+                                <li><a href="/" target="_blank" rel="noreferrer noopener"><img src="../img/icon/youtube.svg" alt="Go to YouTube"></a></li>
+                            </ul>
+                        </div>
+                        <div class="vt-footer__util">
+                            <small class="vt-footer__copyright">&copy; Verita 2023</small>
+                            <nav class="vt-footer__navigation">
+                                <ul>
+                                    <li><a href="/" class="focus-ring">Terms &amp; Conditions</a></li>
+                                    <li><a href="/" class="focus-ring">Privacy Policy</a></li>
+                                    <li><a href="/" class="focus-ring">Sitemap</a></li>
+                                </ul>
+                            </nav>
+                            <small class="vt-footer__majortom">Launched by <a href="https://majortom.com" class="focus-ring">Major Tom</a></small>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+.vt-sticky-table{
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+
+    &__wrapper{
+        overflow-x: scroll;
+
+        @include media-breakpoint-down(md) {
+            overflow-x: visible;
+        }
+    }
+
+    &__nav{
+        display: flex;
+        gap: $spacer;
+        padding: $spacer;
+        padding-left: 0.3rem;
+
+        .btn{
+            padding: 0;
+            width: 2rem;
+            height: 2rem;
+            transform: scale(1.1);
+
+            &:first-of-type::after{
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__label{
+        display: none;
+        font-weight: 300;
+
+        @include media-breakpoint-down(md) {
+            display: inline;
+        }
+    }
+
+    &__desc{
+        min-width: 16em;
+    }
+
+    table{
+        border-collapse: separate;
+        border-spacing: 0px;
+
+        a{
+            color: $link-color;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+
+        td,th{
+            padding: $spacer;
+            padding: 0.5em 1em;
+
+            @include media-breakpoint-down(md) {
+                padding: 0;
+            }
+        }
+        
+        th{
+            white-space: nowrap;
+
+            @include media-breakpoint-down(md) {
+                white-space: unset;
+            }
+        }
+
+        tr{
+
+            th:first-child,
+            td:first-child{
+                border-right: 1px solid $blue;
+                position: sticky;
+                left: 0;
+
+                @include media-breakpoint-down(md) {
+                    position: static;
+                    border-right: none;
+                }
+            }
+
+            &:nth-of-type(odd){
+                background-color: lighten(#D2ECF5, 3%);
+            }    
+        }        
+
+        thead{
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            
+            th{
+                background: $black;
+                color: $white;
+
+                &:first-child{
+                    border-radius: 0.3em 0 0 0.3em;
+                }
+
+                &:last-child{
+                    border-radius: 0 0.3em 0.3em 0;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+
+                @include media-breakpoint-down(md) {
+                    display: grid;
+                    padding: $spacer;
+                    background: lighten(#D2ECF5, 8%);
+
+                    &:nth-of-type(odd){
+                        background-color: lighten(#D2ECF5, 3%);
+                    }                    
+                
+                }
+
+                td,
+                th{
+                    background: lighten(#D2ECF5, 8%);
+                    font-weight: 300;
+                }
+
+                td{
+
+                    @include media-breakpoint-down(md) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        border-bottom: 1px solid $lighter-blue;
+                        padding: 0.25em 0;
+
+                        &:last-child{
+                            border-bottom: none;
+                        }                        
+                    }                    
+                }
+
+                th{
+                    @include media-breakpoint-down(md) {
+                        font-weight: 500;
+                        font-size: 1.125em;
+                        margin-bottom: 0.5em;
+                    }
+                }
+
+                &:nth-of-type(odd){
+                    td,
+                    th{
+                        background: lighten(#D2ECF5, 3%);
+                    }      
+                    
+                    td{
+                        @include media-breakpoint-down(md) {
+                            border-bottom: 1px solid $light-blue;
+
+                            &:last-child{
+                                border-bottom: none;
+                            }                                 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

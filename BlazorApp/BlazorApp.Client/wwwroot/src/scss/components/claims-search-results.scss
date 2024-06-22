@@ -1,0 +1,83 @@
+.vt-claims-search-results{
+
+    .vt-documents__header{
+        border-bottom: 1px solid $light-blue;
+    }
+
+    .vt-items-per-page{
+        @include media-breakpoint-up(xxl){
+            position: relative;
+            right: -26%;
+        }
+    }
+    
+    &__table{
+        margin: $spacer;
+
+        @include media-breakpoint-up(xl){
+            margin: $spacer $spacer*3;
+        }
+    }
+    
+    .vt-sticky-table{
+
+        @include media-breakpoint-up(lg){
+            font-size: 0.9rem;
+        }
+
+        @include media-breakpoint-up(xl){
+            font-size: 1rem;
+        }
+
+        &__address{
+            min-width: 13em;
+        }
+
+        table{
+            table-layout: fixed;
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+
+            tr{
+
+                th,
+                td{
+                    &:nth-child(-n+3){
+                        position: sticky;
+                        border: none;
+                        
+                        @include media-breakpoint-down(md) {
+                            position: static;
+                        }
+                    }        
+                    
+                    &:nth-child(3){
+                        border-right: 1px solid $blue;
+                        
+                        @include media-breakpoint-down(md) {
+                            border-right: none;
+                        }                        
+                    }
+                    
+                    &:nth-child(1){
+                        min-width: 8em;
+                        left: 0px;
+                    }                    
+                    
+                    &:nth-child(2){
+                        min-width: 7em;
+                        left: 8em;
+                    }
+                    
+                    &:nth-child(3){
+                        min-width: 12em;
+                        left: 15em;
+                    }
+                }
+            }        
+
+        }
+    }
+}

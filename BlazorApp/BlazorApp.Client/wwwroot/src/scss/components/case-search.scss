@@ -1,0 +1,374 @@
+.vt-case-search{
+    max-width: 62rem;
+    margin: $spacer*2 auto;
+    margin-bottom: $spacer*0.5;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $spacer*2;
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-top: $spacer*3.5;
+        margin-bottom: $spacer*3;
+    }    
+
+    &__header{
+        padding-bottom: $spacer*1.5;
+        margin-bottom: $spacer*1.5;
+        border-bottom: 1px solid $mid-blue;
+
+        p{
+            font-weight: 300;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__legend{
+        font-size: 1.125rem;
+    }
+    
+    &__form{
+        display: block;
+
+        .js-advanced-search-toggle{
+            margin-top: $spacer;
+        }
+
+        .search-input-icon{
+            position: relative;
+
+            &::after{
+                font-family: $font-icon;
+                content: 'search';
+                font-size: 1.45em;
+                font-weight: 300;
+                position: absolute;
+                right: 0.4em;
+                bottom: 1.3em;
+                color: $blue;
+                pointer-events: none;                        
+            }
+        }        
+    }
+    
+    &__footer{
+        display: grid;
+        gap: $spacer;
+        padding-top: $spacer;
+
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: $spacer*1.5;
+            align-items: flex-start;
+        }
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr auto;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            //padding-top: 0;
+        }
+    }
+
+    &__pills{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $spacer*0.5;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: $spacer*2.35;
+        }
+    }
+
+    &__sort{
+        @include media-breakpoint-up(md) {
+            min-width: 24rem;        
+        }
+    }
+
+    .vt-pill-button{
+        appearance: none;
+        background: $white;
+        border: 1px solid #EFEFEF;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 0.25em 0.5em;
+        padding-bottom: 0.2em;
+        padding-right: 1em;
+        margin: 0;
+        border-radius: 99rem;
+
+        &--hide{
+            display: none;
+        }
+        
+        &::before{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 1.35em;
+            width: 1.35em;
+            background: url(./img/icon/pill-button-close.svg) center center no-repeat;
+            margin-right: 0.75em;
+            position: relative;
+            top: -0.1em;
+
+        }
+    }
+
+    .vt-advanced-search{
+    
+        &__wrapper{
+            padding: $spacer;
+            margin: $spacer*1 0;
+            border-radius: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: $spacer*1.5;
+            
+            @include media-breakpoint-up(md){
+                padding: $spacer*1.5;
+                margin-bottom: $spacer*2;
+            }
+
+            @include media-breakpoint-up(lg){
+                padding: $spacer*2;
+                margin-bottom: $spacer*3;
+            }
+    
+            .vt-input{
+                @include media-breakpoint-up(sm){
+                    grid-column: span 6;
+                }
+
+                @include media-breakpoint-up(lg){
+                    grid-column: span 4;
+                }
+
+                &.search-input-icon::after{
+                    bottom: 0.1em;
+                    right: 0.4em;
+                }
+            }        
+            
+            .vt-input-group{        
+                display: flex;
+                align-items: center;
+
+                @include media-breakpoint-up(sm){
+                    grid-column: span 6;
+                }
+            }
+
+            .vt-check-group{
+                display: grid;
+                gap: 0.5rem;
+                position: relative;
+                bottom: -0.1em;
+            }
+
+            .vt-case-checks{
+                display: flex;
+                align-items: center;
+                
+                @include media-breakpoint-up(sm){
+                    order: 4;
+                    align-items: flex-end;
+                }
+
+                @include media-breakpoint-up(lg){
+                    order: 3;
+                    grid-column: span 4;
+                    padding-left: $spacer*3;
+                    position: relative;
+                    top: $spacer;
+                }
+            }
+
+            .vt-case-keywords-input{
+                @include media-breakpoint-up(sm){
+                    order: 3;
+                }
+
+                @include media-breakpoint-up(lg){
+                    order: 4;
+                    grid-column: span 8;
+                }
+            }
+            
+            .vt-case-clear{
+                @include media-breakpoint-up(sm){
+                    order: 6;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }                
+
+                @include media-breakpoint-up(lg){
+                    order: 5;
+                    grid-column: span 4;
+                    padding-left: $spacer*5.5;
+                    justify-content: flex-start;
+                }
+            }
+            
+            .vt-case-submit{
+                @include media-breakpoint-up(sm){
+                    order: 5;
+                }                
+            }
+        }
+    }
+}
+
+.vt-case-search-results{
+    background: linear-gradient(to bottom, #F7FBFC, #EBF5FA);
+    border-radius: 0 0 1rem 1rem;
+    padding: $spacer*2 0;
+    position: relative;
+    z-index: 2;
+    top: $spacer*-1;
+    margin-bottom: $spacer;
+
+    @include media-breakpoint-up(md){
+        padding: $spacer*4 0;
+        padding-top: $spacer*5;
+    }
+
+    @include media-breakpoint-up(xl){
+        margin-bottom: $spacer*3;
+    }
+
+    &__grid{
+        display: grid;
+        gap: $spacer;
+        padding: 0 $spacer;
+
+        @include media-breakpoint-up(lg){
+            gap: $spacer*2;
+        }
+    }
+}
+
+.vt-case-search-result{
+    background: $white;
+    border: 1px solid $light-blue;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: $spacer;
+    position: relative;
+    box-shadow: 0 0 0 0 inset black;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    
+    @include media-breakpoint-up(lg){
+        padding: $spacer $spacer*2;
+    }
+    
+    @include media-breakpoint-up(xxl){
+        padding: $spacer*1.5 $spacer*2.5;
+    }
+    
+    &:hover,
+    &:focus-within{
+        box-shadow: 0 0 0 3px inset $blue;
+        border-color: transparent;
+    }
+
+    &__link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        &:hover,
+        &:focus{
+            & + .vt-case-search-result__title span{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__header{
+        border-bottom: 1px solid $light-blue;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: $spacer;
+        padding-bottom: $spacer;
+        
+        @include media-breakpoint-up(md){
+            flex-wrap: nowrap;
+        }
+
+        @include media-breakpoint-up(xxl){
+            padding-bottom: $spacer*1.5;
+        }
+    }
+
+    &__title{
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.3;
+        align-self: center;
+
+        &::after{
+            font-family: $font-icon;
+            content: 'chevron_right';
+            font-weight: 300;
+            font-size: 1.3em;
+            line-height: 1;
+            position: relative;
+            top: 0;
+            vertical-align: middle;
+            margin-left: 0.4em;
+        }
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.375rem;
+        }
+    }
+
+    .btn{
+        position: relative;
+        z-index: 2;
+        white-space: nowrap;
+    }
+    
+    &__info{
+        padding-top: $spacer;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $spacer*0.5 $spacer*2;
+
+        > div{
+            flex: 1;
+            display: flex;
+            white-space: nowrap;
+        }
+    }
+
+    &__number{
+        &::after{
+            content: '|';
+            color: $mid-blue;
+            margin: 0 1.25em;
+            font-weight: 100;
+        }
+    }
+    
+    
+    &__location{
+        text-align: left;
+    }
+}

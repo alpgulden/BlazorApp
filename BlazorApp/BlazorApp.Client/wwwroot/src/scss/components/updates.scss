@@ -1,0 +1,137 @@
+.vt-updates{
+    margin-bottom: var(--vt-section-spacer);
+    padding: $spacer;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacer $spacer*2;
+    }
+    
+    @include media-breakpoint-up(xxl) {
+        padding: $spacer;
+    }
+
+    &__intro{
+        padding: 0 $spacer*0.5;
+        padding-top: $spacer*0.75;
+        margin-bottom: $spacer*1.5;     
+        font-weight: 300;   
+        max-width: 49rem;
+
+        h1,h2,h3,h4,h5,
+        .display-1, .display-2, .display-3, .display-4, .display-5{
+            margin-bottom: $spacer*1.5;
+        }
+    }
+
+    &__content{
+        padding: 0 $spacer*0.5;
+    }
+
+    &__list{
+        max-width: 42rem;
+    }
+
+}
+
+.vt-update{
+    padding: $spacer;
+    padding-left: $spacer*2.5;
+    position: relative;
+
+    &.hide{
+        display: none;
+    }
+
+    &:not(.hide) ~ .vt-updates__no-results{
+        display: none;
+    }    
+
+    &__icon{
+        font-size: 2rem;
+        width: 2rem;
+        color: $blue;
+        position: absolute;
+        left: $spacer*-0.25;
+        top: $spacer;
+        height: calc(100% - #{$spacer*1.25});
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after{
+            content: '';
+            flex: 1;
+            width: 1px;
+            background: $blue;
+            margin: $spacer 0;
+        }
+    }
+
+    &__header{
+        padding-bottom: $spacer*1.5;
+
+        @include media-breakpoint-up(md) {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: $spacer;
+            align-items: flex-start;
+            padding-bottom: 0;
+        }
+    }
+
+    &__title{
+        font-weight: 400;
+        padding-top: 0.1em;
+        margin-bottom: $spacer;
+        line-height: 1.35;
+    }
+
+    &__info{
+        margin-bottom: $spacer*1.5;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+
+        strong::before{
+            content: "/";
+            font-weight: 300;
+            margin: 0 0.65em;
+        }
+    }
+
+    &__copy{
+        font-weight: 300;
+
+        &.clipped{
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;  
+            text-overflow: ellipsis;       
+            overflow: hidden;     
+        }
+    }
+
+    &__expand{
+        .btn{
+            display: none;
+            margin-top: $spacer;
+            //margin-bottom: -0.5rem;
+
+            &::after{
+                transform: rotate(-90deg);
+            }
+
+            &.visible{
+                display: inline-block;
+            }
+
+            &.show-less::after{
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

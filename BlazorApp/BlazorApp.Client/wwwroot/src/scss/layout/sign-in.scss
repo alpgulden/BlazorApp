@@ -1,0 +1,110 @@
+.vt-sign-in {
+    background: linear-gradient(to bottom right, #FFFFFF 60%, #CEEBF5);
+    padding-top: $spacer*3;
+    padding-bottom: $spacer*6;
+    position: relative;
+    z-index: 1;
+    margin-bottom: $spacer*-1;
+
+    &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 75vh;
+        min-height: 22rem;
+        position: absolute;
+        z-index: -1;
+        background: linear-gradient(to bottom right, #EEF6FA 60%, #C5E6F3);
+        background-size: cover;
+        left: 0;
+        top: 0;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    &__inner{
+        padding: 0 $spacer;
+    }
+
+    &__alert{
+        max-width: 53rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $light-blue;
+        padding: $spacer*2;
+        border-radius: .7rem;
+
+        *:last-child { margin-bottom: 0; }
+    }
+
+    &__form {
+        position: relative;
+        overflow: hidden;
+        background: $black;
+        padding: $spacer*2;
+        margin-top: $spacer*3;
+        border-radius: 0.5rem;
+        color: $white;
+
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $spacer*5.5;
+
+        @include media-breakpoint-up(lg) {
+            padding: $spacer*3 $spacer*5 $spacer*3.5;
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url('./img/sign-in-background.png') 0 12rem no-repeat;
+            left: 0;
+            top: 0;
+            background-blend-mode: multiply;
+            opacity: 1;
+        }
+    }
+
+    &__intro {
+        max-width: 22rem;
+        position: relative;
+
+        h1 {
+            margin-bottom: $spacer*1.5;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 3.2rem;
+            }
+        }
+
+        a {
+            color: $blue;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    .vt-form{
+        flex-grow: 1;
+        position: relative;
+        background: none;
+    }
+
+    &__show-more{
+        width: 100%;
+        position: relative;
+        border-top: 1px solid $mid-blue;
+        padding-top: $spacer*4;
+        margin-top: $spacer*4;
+        font-weight: 300;
+
+        strong{
+            font-weight: 600;
+        }
+    }
+    .btn-arrow--down { color: $white; }
+}

@@ -1,0 +1,51 @@
+.vt-page-hero{
+    margin-bottom: var(--vt-section-spacer);
+    background: url(./img/page-hero.jpg) 75% center no-repeat;
+    background-size: cover;
+    border-radius: 0 0 1rem 1rem;
+    
+    @include media-breakpoint-up(md) {
+        background: url(./img/page-hero.jpg) center right no-repeat;
+        background-size: cover;
+    }
+
+    &--dark{
+        background: url(./img/page-hero-dark.jpg) 75% center no-repeat;
+        background-size: cover;
+        color: $white;
+        
+        @include media-breakpoint-up(md) {
+            background: url(./img/page-hero-dark.jpg) center right no-repeat;
+            background-size: cover;
+        }
+
+        .vt-breadcrumb .breadcrumb-item,
+        .vt-breadcrumb .breadcrumb-item::before,
+        .vt-breadcrumb .breadcrumb-item a{
+            color: $white;
+        }
+    }       
+
+    .vt-breadcrumb{
+        padding-left: $spacer*1.5;
+        
+        @include media-breakpoint-up(xl) {
+            padding-left: 0;
+        }
+    }
+
+    &__content{
+        padding: $spacer*1.5;
+
+        @include media-breakpoint-up(xl) {
+            padding: $spacer*3.5 0;
+        }
+    }
+
+    &__copy{
+        margin: $spacer*1.5 0;
+        margin-bottom: $spacer*2;
+        font-weight: 300;
+        max-width: 32em;
+    }
+}

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="76x76" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="./main.css">
+	<script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./swiper/swiper-bundle.min.js"></script>
+	<script src="./src/js/main.js"></script>
+	<title>Search Results - Verita BK</title>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header class="vt-header navbar navbar-toggler navbar-expand-lg sticky-top">
+		<div class="vt-header__top">
+			<div class="container-xxl">
+				<div class="container--inner">
+					<!-- Logo -->
+					<a href="/" class="vt-header__logo focus-ring">
+						<img src="./img/veritas-logo.png" alt="Verita">
+					</a>
+
+					<!-- Mobile Menu Toggle -->
+					<button class="vt-header__toggle navbar-toggler js-header-toggle" type="button"
+						data-bs-toggle="collapse" data-bs-target="#vt-navbar" aria-controls="vt-navbar"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<!-- Desktop Util -->
+					<div class="vt-header__util">
+                        <a href="/" class="vt-header__link vt-header__link--precedent">Verita Precedent</a>
+						<a href="/" class="vt-header__link">Client Login</a>
+						<a href="/" class="vt-header__link">Request Proposal</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Navigation -->
+		<div class="vt-header__navigation">
+			<div class="container-xxl g-0">
+				<div class="container--inner">
+					<div class="collapse navbar-collapse" id="vt-navbar" role="navigation">
+                        <a href="/" class="btn btn-arrow btn-arrow--back">Active Cases</a>
+                        <div class="vt-header__mobile-links">
+                            <a href="/" class="precedent">Verita Precedent</a>
+                            <a href="/">Client Login</a>
+                            <a href="/">Request Proposal</a>                            
+                        </div>
+						<ul class="navbar-nav vt-menu">
+                            <li class="vt-menu-item--current">
+                                <a href="/">Case home</a>
+                            </li>
+                            <li>
+                                <a href="/">Court Docket</a>
+                            </li>
+                            <li class="vt-menu-item--has-children">
+                                <a class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" href="#" role="button" aria-expanded="false">Sale Related Documents</a>
+                                <ul class="vt-sub-menu dropdown-menu">
+                                    <li><a href="/">Court Docket</a></li>
+                                    <li><a href="/">Court Docket</a></li>
+                                    <li><a href="/">Court Docket</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/">Solicitation Materials</a></li>
+                            <li><a href="/">Claims Register</a></li>
+                            <li><a href="/" target="_blank">Notice Lists</a></li>
+                            <li><a href="/">Appellate Dockets</a></li>
+                            <li><a href="/">Applicable Forms</a></li>
+                            <li><a href="/">Voluntary Petition</a></li>
+                            <li><a href="/" target="_blank">Claim Form</a></li>
+                            <li><a href="/">Press Release</a></li>
+                            <li><a href="/">Subscribe to Docket</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>        
+	</header>
+
+	<!-- Main Content -->
+	<main class="vt-page-content no-bg">
+        <section class="vt-precendent-search vt-search-results">
+
+                <div class="vt-precendent-search__intro vt-search-results__intro">
+                    <div class="container--inner">
+                        <a href="/" class="btn btn-arrow btn-arrow--back">Back to search</a>
+                        <h1 class="vt-precendent-search__title display-2">Search Results</h1>
+                        <p class="vt-search-results__num">Your search produced 355 results.</p>
+                    </div>
+                </div>
+                <div class="container--inner">
+                    <div class="vt-search-results__results">
+                        <div class="vt-search-results__inner">
+                            <div class="vt-search-results__header">
+                                <div class="vt-search-results__sort vt-input">
+                                    <label for="listViewType" class="visually-hidden">Sort By</label>
+                                    <select class="form-select js-list-view-toggle" id="listViewType">
+                                        <option value="docket">Court Docket</option>
+                                        <option value="date">Date</option>
+                                    </select>                   
+                                </div>                            
+                                <div class="vt-pagination">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="/" rel="first" class="first"><span class="visually-hidden">First</span></a></li>
+                                            <li><a href="/" rel="prev" class="prev"><span class="visually-hidden">Previous</span></a></li>
+
+                                            <li class="current">
+                                                <span><input type="text" value="1"></span><span> of 5</span>
+                                            </li>
+
+                                            <li><a href="/" rel="next" class="next"><span class="visually-hidden">Next</span></a></li>
+                                            <li><a href="/" rel="last" class="last"><span class="visually-hidden">Last</span></a></li>
+                                        </ul>
+                                    </nav>                   
+                                </div>
+                                <div class="vt-search-results__buttons">
+                                    <a href="#" class="btn btn-excel">Excel</a>                     
+                                </div>
+                            </div>
+                            <div class="vt-search-results__list">
+                                <div class="vt-search-result">
+                                    <div class="vt-search-result__main">
+                                        <p class="vt-search-result__docket"><strong>Docket #</strong> 101</p>
+                                        <p class="vt-search-result__date"><strong>Date Filed:</strong> 4/15/2019</p>
+                                        <a href="/" class="vt-search-result__title">
+                                            Voluntary Petition for Achaogen,  Inc. (Case No. 19-10844) (Filed by Achaogen, Inc.)
+                                        </a>
+                                    </div>
+                                    <div class="vt-search-result__info">
+                                        <p><strong>Jurisdiction:</strong> Central District California</p>
+                                        <p><strong>Case:</strong> Achgeon, Inc.</p>
+                                        <p><strong>Industry Group:</strong> Healthcare</p>
+                                    </div>
+                                </div>
+
+                                <div class="vt-search-result">
+                                    <div class="vt-search-result__main">
+                                        <p class="vt-search-result__docket"><strong>Docket #</strong> 101</p>
+                                        <p class="vt-search-result__date"><strong>Date Filed:</strong> 4/15/2019</p>
+                                        <a href="/" class="vt-search-result__title">
+                                            Voluntary Petition for Achaogen,  Inc. (Case No. 19-10844) (Filed by Achaogen, Inc.)
+                                        </a>
+                                    </div>
+                                    <div class="vt-search-result__info">
+                                        <p><strong>Jurisdiction:</strong> Central District California</p>
+                                        <p><strong>Case:</strong> Achgeon, Inc.</p>
+                                        <p><strong>Industry Group:</strong> Medical</p>
+                                    </div>
+                                </div>
+
+                                <div class="vt-search-result">
+                                    <div class="vt-search-result__main">
+                                        <p class="vt-search-result__docket"><strong>Docket #</strong> 101</p>
+                                        <p class="vt-search-result__date"><strong>Date Filed:</strong> 4/15/2019</p>
+                                        <a href="/" class="vt-search-result__title">
+                                            Voluntary Petition for Example,  Inc. (Case No. 19-10844)
+                                        </a>
+                                    </div>
+                                    <div class="vt-search-result__info">
+                                        <p><strong>Jurisdiction:</strong> Central District California</p>
+                                        <p><strong>Case:</strong> Achgeon, Inc.</p>
+                                        <p><strong>Industry Group:</strong> Healthcare</p>
+                                    </div>
+                                </div>
+
+                                <div class="vt-search-result">
+                                    <div class="vt-search-result__main">
+                                        <p class="vt-search-result__docket"><strong>Docket #</strong> 3423425</p>
+                                        <p class="vt-search-result__date"><strong>Date Filed:</strong> 4/15/2019</p>
+                                        <a href="/" class="vt-search-result__title">
+                                            Voluntary Petition for Achaogen,  Inc. (Case No. 19-10844) (Filed by Achaogen, Inc.)
+                                        </a>
+                                    </div>
+                                    <div class="vt-search-result__info">
+                                        <p><strong>Jurisdiction:</strong> Central District California</p>
+                                        <p><strong>Case:</strong> Achgeon, Inc.</p>
+                                        <p><strong>Industry Group:</strong> Healthcare</p>
+                                    </div>
+                                </div>
+
+                                <div class="vt-search-result">
+                                    <div class="vt-search-result__main">
+                                        <p class="vt-search-result__docket"><strong>Docket #</strong> 101</p>
+                                        <p class="vt-search-result__date"><strong>Date Filed:</strong> 4/15/2019</p>
+                                        <a href="/" class="vt-search-result__title">
+                                            Voluntary Petition for Achaogen,  Inc. (Case No. 19-10844) (Filed by Achaogen, Inc.)
+                                        </a>
+                                    </div>
+                                    <div class="vt-search-result__info">
+                                        <p><strong>Jurisdiction:</strong> Central District California</p>
+                                        <p><strong>Case:</strong> Achgeon, Inc.</p>
+                                        <p><strong>Industry Group:</strong> Technology</p>
+                                    </div>
+                                </div>
+
+                                <div class="vt-search-result">
+                                    <div class="vt-search-result__main">
+                                        <p class="vt-search-result__docket"><strong>Docket #</strong> 101</p>
+                                        <p class="vt-search-result__date"><strong>Date Filed:</strong> 4/15/2019</p>
+                                        <a href="/" class="vt-search-result__title">
+                                            Voluntary Petition for Achaogen,  Inc. (Case No. 19-10844) (Filed by Achaogen, Inc.)
+                                        </a>
+                                    </div>
+                                    <div class="vt-search-result__info">
+                                        <p><strong>Jurisdiction:</strong> Central District California</p>
+                                        <p><strong>Case:</strong> Achgeon, Inc.</p>
+                                        <p><strong>Industry Group:</strong> Healthcare</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vt-search-results__footer">
+                            <div class="vt-pagination">
+                                <nav>
+                                    <ul>
+                                        <li><a href="/" rel="first" class="first"><span class="visually-hidden">First</span></a></li>
+                                        <li><a href="/" rel="prev" class="prev"><span class="visually-hidden">Previous</span></a></li>
+
+                                        <li class="current">
+                                            <span><input type="text" value="1"></span><span> of 5</span>
+                                        </li>
+
+                                        <li><a href="/" rel="next" class="next"><span class="visually-hidden">Next</span></a></li>
+                                        <li><a href="/" rel="last" class="last"><span class="visually-hidden">Last</span></a></li>
+                                    </ul>
+                                </nav>
+                                <div class="vt-results">
+                                    Showing 1—100 of 336 results
+                                </div>                                            
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+    </main>
+
+
+	<!-- Footer -->
+	<footer class="vt-footer vt-footer--full">
+		<div class="container--inner">
+			<a href="/" class="vt-footer__logo focus-ring">
+				<img src="./img/veritas-logo-light.png" alt="Go to homepage">
+			</a>
+			<div class="vt-footer__social">
+				<ul class="vt-social-links">
+					<li><a href="/" target="_blank" rel="noreferrer noopener"><img src="./img/icon/facebook.svg" alt="Go to Facebook"></a></li>
+					<li><a href="/" target="_blank" rel="noreferrer noopener"><img src="./img/icon/twitter.svg" alt="Go to Twitter"></a></li>
+					<li><a href="/" target="_blank" rel="noreferrer noopener"><img src="./img/icon/instagram.svg" alt="Go to Instagram"></a></li>
+					<li><a href="/" target="_blank" rel="noreferrer noopener"><img src="./img/icon/linkedin.svg" alt="Go to LinkedIn"></a></li>
+					<li><a href="/" target="_blank" rel="noreferrer noopener"><img src="./img/icon/youtube.svg" alt="Go to YouTube"></a></li>
+				</ul>
+			</div>
+			<div class="vt-footer__util">
+				<small class="vt-footer__copyright">&copy; Verita 2023</small>
+				<nav class="vt-footer__navigation">
+					<ul>
+						<li><a href="/" class="focus-ring">Terms &amp; Conditions</a></li>
+						<li><a href="/" class="focus-ring">Privacy Policy</a></li>
+						<li><a href="/" class="focus-ring">Sitemap</a></li>
+					</ul>
+				</nav>
+				<small class="vt-footer__majortom">Launched by <a href="https://majortom.com" class="focus-ring">Major Tom</a></small>
+			</div>
+		</div>
+	</footer>	
+
+</body>
+
+</html>

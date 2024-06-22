@@ -1,0 +1,40 @@
+@BlazorApp_HostAddress = https://localhost:7172
+
+GET {{BlazorApp_HostAddress}}/cases/
+Accept: application/json
+
+###
+
+GET {{BlazorApp_HostAddress}}/cases/active
+Accept: application/json
+
+###
+
+GET {{BlazorApp_HostAddress}}/cases/2
+
+###
+
+Post {{BlazorApp_HostAddress}}/cases
+Content-Type: application/json
+
+{
+  "name": "Spaceman",
+  "isActive": false
+}
+
+###
+
+Put {{BlazorApp_HostAddress}}/cases/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Contact",
+  "isActive": true
+}
+
+###
+
+DELETE {{BlazorApp_HostAddress}}/cases/4
+
+###

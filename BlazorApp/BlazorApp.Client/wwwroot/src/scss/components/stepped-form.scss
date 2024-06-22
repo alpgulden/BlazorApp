@@ -1,0 +1,154 @@
+.vt-stepped-form{
+    background: linear-gradient(to right, #F6FAFD 50%, #D6EAF4);
+    padding-bottom: var(--vt-section-spacer);
+    padding-top: $spacer*1.5;
+
+    .container--inner{
+        max-width: 82rem;
+    }
+
+    &__inner{
+        background: $white;
+        border: 1px solid $light-blue;
+        border-radius: 0.5rem;
+        padding: $spacer;
+
+        @include media-breakpoint-up(xxl) {
+            padding: $spacer*2 $spacer*3.5;
+        }
+    }
+
+    .vt-breadcrumb{
+        padding-top: 0;
+    }
+
+    &__status{
+        border-top: 1px solid #EDF2FD;
+        border-bottom: 1px solid #EDF2FD;
+        padding: $spacer;
+        position: relative;
+        width: calc(100% + #{$spacer * 2});
+        left: $spacer*-1;
+
+        @include media-breakpoint-up(lg) {
+            border-bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        @include media-breakpoint-up(xxl) {
+            width: calc(100% + #{$spacer * 7});
+            left: $spacer*-3.5;
+            padding: $spacer*1.5 $spacer*3.5;
+            padding-bottom: $spacer*0.5;
+        }        
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: $spacer*4;
+            background: linear-gradient(to right, transparent 10%, $white 40%);
+        }
+
+        .js-stepped-form-progress{
+            padding-bottom: $spacer*0.5;
+            font-weight: 700;
+            white-space: nowrap;
+
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 0;
+                margin-right: $spacer*1.5;
+            }
+        }
+    }
+}
+
+.vt-claim-form{
+    font-weight: 300;
+
+    &__steps{
+        margin-top: $spacer;
+        background: linear-gradient(to bottom right, #FFFFFF 50%, #F6FAFC);
+        padding: $spacer;
+        border: 1px solid $light-blue;
+        border-radius: 0.5rem;
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $spacer*2.5;
+        }
+    }
+
+    &__footer{
+        padding: $spacer*0.5 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.last-step{
+            .vt-claim-form__submit{
+                display: inline-block;
+            }
+
+            .js-form-step-next{
+                display: none;
+            }
+        }
+    }
+
+    &__submit{
+        display: none;
+    }
+
+    .form-control:not(.is-invalid),
+    .form-select:not(.is-invalid){
+        border-color: $mid-blue;
+    }    
+}
+
+.vt-form-step{
+    padding: $spacer 0;
+    max-width: 48rem;
+    margin: 0 auto;
+    display: none;
+
+    &--active{
+        display: block;
+    }
+
+    &__intro{
+        font-weight: 300;
+        margin-bottom: $spacer*2;
+
+        @include media-breakpoint-up(lg) {
+            margin: $spacer*3 0;
+            margin-top: $spacer*2;
+        }
+
+        h2{
+            margin-bottom: 1em;
+        }
+    }
+
+    &__fields{
+        display: grid;
+        gap: $spacer;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: $spacer;
+        }
+    }
+
+    input,
+    select{
+        max-width: 30rem;
+    }
+
+    textarea{
+        max-width: 36rem;
+    }
+}

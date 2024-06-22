@@ -1,0 +1,99 @@
+.vt-quick-links{
+    padding: 0 $spacer;
+    margin-bottom: var(--vt-section-spacer);
+
+
+    .container--inner{
+        max-width: 56rem;
+    }
+
+    &__heading{
+        margin-bottom: $spacer*1.5;
+    }
+
+    &__grid{
+        display: grid;
+        gap: $spacer;
+        //align-items: flex-start;
+
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-up(xl) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @include media-breakpoint-up(xxl) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.vt-quick-link{
+    display: flex;
+    align-items: center;
+    color: $black;
+    text-decoration: none;
+    border: 1px solid $blue;
+    background: $light-blue;
+    padding: $spacer*1.125 $spacer*3.5;
+    padding-left: $spacer*1.125;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    line-height: 1.35;
+    overflow: hidden;
+
+    &::before{
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, transparent, $white);
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &::after{
+        font-family: $font-icon;
+        content: 'chevron_right';
+        display: inline-block;
+        font-size: 1.5em;
+        font-weight: 300;
+        position: absolute;
+        top: calc(50% - 0.65em);
+        right: $spacer*0.5;
+        transition: right 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus-visible{
+
+        &::after{
+            right: $spacer*0.25;
+        }
+
+        &::before{
+            opacity: 1;
+        }
+    }
+
+    *{
+        position: relative;
+        z-index: 2;
+    }
+
+}

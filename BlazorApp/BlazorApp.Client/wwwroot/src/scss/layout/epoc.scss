@@ -1,0 +1,231 @@
+.vt-case-banner--epoc{
+    background: none;
+    margin-bottom: 0;
+
+    .vt-case-banner{
+
+        &__title{
+            line-height: 1.3;
+            font-size: 1.5rem;
+    
+            @include media-breakpoint-up(xl) {
+                font-size: 1.75rem;
+            }
+        }
+
+        &__info{
+            padding-top: $spacer;
+            font-weight: 300;
+
+            @include media-breakpoint-up(md) {
+                padding-top: 0;
+            }
+        
+            a{
+                color: $blue !important;
+                text-decoration: none;
+                display: block;
+                margin-bottom: 0.65rem;
+
+                &:hover,
+                &:focus{
+                    text-decoration: underline;
+                }
+
+                &[target=_blank]{
+                    @extend .link-external;
+                }
+            }
+
+            p:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &__content{
+            @include media-breakpoint-up(md) {
+                min-width: 20rem;
+            }
+        }
+
+        &__inner{
+            @include media-breakpoint-up(md) {
+                grid-template-columns: 1fr auto;
+                padding-top: $spacer*1.5;
+                padding-bottom: $spacer*1.5;
+            }
+        }
+    }
+}
+
+.vt-epoc-form{
+
+    .vt-form{
+
+        &__divider{
+            margin: $spacer*0.5 0;
+        }
+
+        &__fieldgroup{
+            display: grid;
+            gap: $spacer;
+    
+            @include media-breakpoint-up(md) {
+                gap: $spacer*1.5;
+            }            
+        }
+    }
+
+    .vt-input{
+        p{
+            font-weight: 300;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            strong{
+                font-weight: 500;
+            }
+        }
+
+        a{
+            color: currentColor;
+        }
+    }
+
+    .vt-check-group--vertical{
+        background: none;
+        border: none;
+        padding: 0;
+        gap: $spacer;
+    }
+
+    .form-select[size]:not([size="1"]):not([multiple]){
+        border-radius: 0.3rem;
+        border: 1px solid $light-blue;
+    }
+
+
+    &__nav{
+        padding: $spacer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: $spacer*4;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: $spacer $spacer*3;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $spacer*2.5;
+        }
+        
+        @include media-breakpoint-up(xxl) {
+            padding: $spacer $spacer*4.5;
+            padding-bottom: $spacer*2.5;
+        }
+
+        .btn-save{
+            background: none;
+
+            &::before{
+                content: none;
+            }
+
+            @include media-breakpoint-down(sm) {
+                position: absolute;
+                bottom: -1rem;
+                width: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+
+            &:hover,
+            &:focus{
+                background: none;
+                box-shadow: none;
+
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &.last-step{
+            .vt-epoc-form__next{ display: none; }
+            .vt-epoc-form__submit{ display: inline-block; }
+        }
+    }
+
+    &__submit{
+        display: none;
+    }
+}
+
+.vt-epoc-step{
+    display: none;
+
+    &__intro{
+        padding: $spacer*1.5 $spacer*2;
+        padding-bottom: $spacer;
+        max-width: 56rem;
+        font-weight: 300;
+
+    
+        @include media-breakpoint-up(sm) {
+            padding: $spacer*2.5 $spacer*2;
+            padding-bottom: $spacer*1.5;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-left: $spacer*4;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding-left: $spacer*5.5;
+        }
+
+        p:first-of-type{
+            margin-top: $spacer;
+
+            @include media-breakpoint-up(xl) {
+                margin-top: $spacer*1.5;
+            }
+        }
+    }    
+
+    &__fields{
+        border: 1px solid $light-blue;
+        background: linear-gradient(to bottom right, #FFFFFF 20%, #EBF5FA);
+        border-radius: 0.7rem;
+        padding: $spacer;
+        margin: 0 $spacer;
+        display: grid;
+        gap: $spacer;
+
+        @include media-breakpoint-up(md) {
+            gap: $spacer*1.5;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin: 0 $spacer*2;
+            padding: $spacer*2;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding: $spacer*2 $spacer*3.5;
+            gap: $spacer*2;
+        }
+    }
+
+    &--active{
+        display: block;
+    }
+}

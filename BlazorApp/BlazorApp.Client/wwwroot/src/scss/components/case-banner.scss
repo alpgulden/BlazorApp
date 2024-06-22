@@ -1,0 +1,101 @@
+.vt-case-banner{
+    background: linear-gradient(to bottom right, #EBF5FA 60%, #FFFFFF);
+    padding-top: $spacer;
+    margin-bottom: $spacer*1.5;
+
+    &--simple{
+        .vt-case-banner__title{
+            font-size: 2rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+    }
+
+    
+    @include media-breakpoint-up(lg) {
+        margin-bottom: $spacer*3;
+        background: none;
+    }
+    
+    @include media-breakpoint-up(xl) {
+        padding-top: $spacer*2;
+    }
+
+    &__inner{
+        background: $black;
+        color: $white;
+        margin: 0 $spacer;
+        border-radius: 0.7rem;
+        padding: $spacer*1.75;
+
+        @include media-breakpoint-up(md) {
+            background: $black url(./img/case-banner.png) center right no-repeat;
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 1fr 16rem;
+            align-items: center;
+            gap: $spacer*2;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 14rem;
+        }
+        
+        @include media-breakpoint-up(xl) {
+            grid-template-columns: 1fr 16rem;
+            padding-left: $spacer*3.5;
+            padding-bottom: $spacer*2;
+            margin: 0 $spacer*2;
+        }
+    }
+
+    &__logo{
+
+        @include media-breakpoint-up(md) {
+            order: 2;
+        }
+
+        &-inner{
+            aspect-ratio: 300/125;
+            background: $white;
+            border-radius: 0.5rem;
+            padding: $spacer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media-breakpoint-up(md) {
+                aspect-ratio: 240/165;
+            }
+
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__title{
+        display: block;
+        font-size: 2.25rem;
+        font-weight: 500;
+        margin-top: $spacer;
+        margin-bottom: $spacer*0.25;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 3rem;
+        }
+    }
+    
+    &__number{
+        display: block;
+        font-weight: 300;
+    }
+
+    &__cta{
+        padding-top: $spacer;
+    }
+}

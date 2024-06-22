@@ -1,0 +1,70 @@
+.vt-simple-form{
+    margin-bottom: var(--vt-section-spacer);
+
+    .container--inner{
+        display: grid;
+        gap: var(--vt-section-spacer);
+        
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: $spacer*2;
+        }
+        
+        @include media-breakpoint-up(xxl) {
+            gap: $spacer*5;
+        }
+    }
+
+    &__intro{
+        font-weight: 300;
+        padding: 0 $spacer*1.5;
+
+        @include media-breakpoint-up(xl) {
+            padding: 0;
+        }
+    }
+
+    &__title{
+        margin-bottom: $spacer*2.5;
+    }
+
+    &__copy{
+        max-width: 24rem;
+        margin-bottom: $spacer*2.5;
+    }
+
+    &__contact{
+        display: grid;
+        gap: $spacer;
+
+        a{
+            display: block;
+            text-decoration: none;
+            color: $black;
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+                text-underline-offset: 0.2em;
+            }
+        }
+
+        .material-icon{
+            font-weight: 500;
+            color: $blue;
+            margin-right: 0.25em;
+        }
+    }
+
+    &__form{
+        padding: 0 $spacer*1.5;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: 0;
+        }
+    }
+}

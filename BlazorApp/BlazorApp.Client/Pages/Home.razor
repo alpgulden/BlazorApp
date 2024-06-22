@@ -1,0 +1,314 @@
+@page "/"
+@using Microsoft.AspNetCore.Components.Forms
+
+@using BlazorApp.Client.Models
+@using BlazorApp.Client.Services
+@implements IDisposable
+@inject PersistentComponentState ApplicationState
+@inject ICaseService CaseService
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script src="./src/js/main.js"></script>
+    <title>Home - Verita BK</title>
+</head>
+
+<body>
+
+	
+    	<!-- Main Content -->
+	<main class="vt-page-content no-bg">
+
+		<section class="vt-home-hero">
+			<div class="vt-home-hero__inner">
+				<div class="container--inner">
+					<div class="vt-home-hero__content">
+						<h1 class="display-1 vt-home-hero__heading">Navigating Corporate Restructuring with Expertise</h1>
+						<p>Nunc faucibus a pellentesque sit amet. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Eget arcu dictum varius duis.</p>
+						<a href="/" class="vt-home-hero__cta btn btn-primary">Find a case</a>
+					</div>
+					<div class="vt-home-hero__slider hero-slider js-hero-slider">
+						<div class="hero-slider__header">
+							<strong>Trusted By</strong>
+							<div class="hero-slider__pagination">
+								<button class="js-slider-prev btn btn-arrow">
+									<span class="visually-hidden">Previous Slide</span>
+								</button>
+								<div class="swiper-pagination"></div>
+								<button class="js-slider-next btn btn-arrow">
+									<span class="visually-hidden">Next Slide</span>
+								</button>
+							</div>
+						</div>
+						<div class="hero-slider__slider">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-slider__slide">
+											<img src="../img/veritas-logo.png" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+					<div class="vt-home-hero__video-bg">
+						<video nocontrols muted playsinline loop autoplay>
+							<source src="./hero-background.mp4" type="video/mp4" />
+						</video>
+					</div>
+				</div>
+			</div>
+			<div class="vt-case-search">
+				<div class="vt-case-search__header">
+					<h2 class="display-3">Find a case</h2>
+					<p>Lobortis elementum nibh tellus molestie.</p>
+				</div>
+				<form class="vt-case-search__form vt-form">
+					<fieldset>
+						<legend class="form-label vt-case-search__legend">Search by Name, Case Number, Jurisdiction, Date</legend>
+						<div class="vt-input search-input-icon">
+							<label class="visually-hidden" for="searchName">Name</label>
+							<input type="text" class="form-control" id="searchName" name="searchName" aria-describedby="searchNameNote" placeholder="Search">
+							<span class="vt-input__note vt-input__note--sm" id="searchNameNote">E.g. "Proterra" or "23-11120" or "Delaware" or "2022"</span>
+						</div>
+						<button class="btn-simple js-advanced-search-toggle focus-ring" 
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#vt-advanced-search"
+								aria-controls="vt-navbar"
+								aria-expanded="false"
+								aria-label="Toggle Advanced Search">
+								Advanced Search
+						</button>
+						<div class="vt-case-search__advanced vt-advanced-search collapse" id="vt-advanced-search">
+							<div class="vt-advanced-search__wrapper vt-form--dark">
+								<div class="vt-input">
+									<label for="industry" class="form-label">Industry</label>
+									<select class="form-select" id="industry">
+										<option selected>All Industries</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>  									
+								</div>
+								<div class="vt-input">
+									<label for="judge" class="form-label">Judge</label>
+									<select class="form-select" id="judge">
+										<option selected>All Judges</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>  									
+								</div>	
+								<fieldset class="vt-input-group vt-case-checks">
+									<legend class="form-label visually-hidden">Case Status</legend>
+									<div class="vt-check-group">
+										<div class="form-check">
+											<input class="form-check-input js-case-search-active-check" type="checkbox" name="activeCases" id="activeCases" checked>
+											<label class="form-check-label" for="activeCases">Active Cases</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input js-case-search-nonactive-check" type="checkbox" name="nonActiveCases" id="nonActiveCases">
+											<label class="form-check-label" for="nonActiveCases">Non-Active Cases</label>
+										</div>
+									</div>
+								</fieldset>											
+								<div class="vt-input search-input-icon vt-case-keywords-input">
+									<label class="form-label" for="keywords">Keywords</label>						
+									<input type="text" class="form-control" id="keywords" name="keywords" placeholder="Search">
+								</div>
+ 								<div class="vt-input vt-case-clear">
+									<button class="btn-simple js-advanced-search-clear focus-ring" type="button">Clear selections</button>
+								</div>
+								<div class="vt-input vt-case-submit">
+									<button type="submit" class="btn btn-primary">Search</button>
+								</div>								
+							</div>
+						</div>
+					</fieldset>						
+				</form>
+				<div class="vt-case-search__footer">
+					<div class="vt-case-search__pills js-case-search-pills">
+						<button class="vt-pill-button vt-pill-button--active focus-ring">Active Cases</button>
+						<button class="vt-pill-button vt-pill-button--nonactive vt-pill-button--hide focus-ring">Non-Active Cases</button>
+					</div>
+					<div class="vt-case-search__sort vt-input">
+						<label for="caseSort" class="form-label">Sort By</label>
+						<select class="form-select" id="caseSort">
+							<option selected>Recently Filed</option>
+							<option value="1">Oldest</option>
+							<option value="2">Alphabetical</option>
+						</select>  									
+					</div>					
+				</div>
+			</div>
+		</section>
+
+        @foreach (var _case in cases)
+        {
+            <section class="vt-case-search-results">
+			    <div class="container--inner">
+				    <div class="vt-case-search-results__grid">
+					    <div class="vt-case-search-result">
+						    <div class="vt-case-search-result__header">
+							    <a href="/" class="vt-case-search-result__link">
+                                                    <span class="visually-hidden">@_case.Name</span>
+							    </a>
+                                                <strong class="vt-case-search-result__" aria-hidden="true"><span>@_case.Name</span></strong>
+							    <a href="https://google.com" class="btn btn-outline btn">Court Docket</a>
+						    </div>
+						    <div class="vt-case-search-result__info">
+							    <div>
+                                                    <span class="vt-case-search-result__number">@_case.Id</span>
+                                                    <span class="vt-case-search-result__date">@_case.Date</span>
+							    </div>
+                                                <span class="vt-case-search-result__location">@_case.Court</span>
+						    </div>
+					    </div>
+                    </div>
+                </div>
+                </section>
+        }
+                        
+            
+        <!-- Bottom Banner -->
+        <section class="vt-bottom-banner">
+            <div class="container-xxl g-3 g-md-4 g-xl-5">
+                <div class="container--inner">
+                    <div class="vt-bottom-banner__content">
+                        <h2 class="vt-bottom-banner__heading display-3">Still have questions? We can help.</h2>
+                        <p class="vt-bottom-banner__copy">
+                            Lobortis elementum nibh tellus molestie. Adipiscing diam donec
+                            adipiscing tristique risus nec. Auctor urna nunc id cursus metus aliquam eleifend.
+                        </p>
+                        <a href="/" class="vt-bottom-banner__cta btn btn-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+   </body>
+</html>
+
+    @code {
+    
+    private Case editCase = new();
+    private string editRowStyle = "none";
+    private string? newCaseName;
+    private Case[]? cases;
+    private bool getCases;
+    private PersistingComponentStateSubscription persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        persistingSubscription = ApplicationState.RegisterOnPersisting(PersistData);
+
+        if (!ApplicationState.TryTakeFromJson<Case[]>(nameof(cases), out var restoredData))
+        {
+            await GetCases();
+        }
+        else
+        {
+            cases = restoredData!;
+        }
+    }
+
+    private async Task GetCases()
+    {
+        cases = await CaseService.GetCasesAsync(getCases) ?? Array.Empty<Case>();
+    }
+
+    private Task PersistData()
+    {
+        ApplicationState.PersistAsJson(nameof(cases), cases);
+
+        return Task.CompletedTask;
+    }
+
+    private void EditCase(String id)
+    {
+        if (cases is not null)
+        {
+            editCase = cases.Single(i => i.Id == id);
+            editRowStyle = "table-row";
+        }
+    }
+
+    private async Task AddCase()
+    {
+        if (!string.IsNullOrEmpty(newCaseName))
+        {
+            var addCase = new Case { Name = newCaseName, IsActive = false };
+            await CaseService.PostCaseAsync(addCase);
+            newCaseName = string.Empty;
+            await GetCases();
+            editRowStyle = "none";
+        }
+    }
+
+    private async Task SaveCase()
+    {
+        if (editCase is not null)
+        {
+            await CaseService.PutCaseAsync(editCase.Id, editCase);
+        }
+        await GetCases();
+        editRowStyle = "none";
+    }
+
+    private async Task DeleteCase(String id)
+    {
+        await CaseService.DeleteCaseAsync(id);
+        await GetCases();
+        editRowStyle = "none";
+    }
+
+    void IDisposable.Dispose() => persistingSubscription.Dispose();
+}

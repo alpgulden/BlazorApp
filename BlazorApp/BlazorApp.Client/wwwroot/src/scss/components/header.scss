@@ -1,0 +1,223 @@
+.vt-header{
+    padding: 0;
+    border: none;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ADD0E8;
+    
+    &__top{
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        height: 80px;
+        padding: 0 $spacer*0.5;
+        background: linear-gradient(to right, #FFFFFF 20%, #EBF5FA);
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+        }
+
+        .container--inner{
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__logo{
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            margin-right: $spacer*2;
+        }
+        
+        & ~ .vt-header__wordmark{
+            position: relative;
+            padding-top: $spacer;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 0;
+                flex: 1;        
+            }
+         
+        }    
+
+        span{
+            display: block;
+            padding-bottom: 0.35em;
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+
+        svg,
+        img{
+            max-width: 8rem;
+        }
+    }
+
+    .navbar-toggler{
+        position: absolute;
+        right: 0;
+        top: $spacer*1.1;
+
+        &[aria-expanded=true] .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2717.828%27%20height%3D%2718.078%27%20viewBox%3D%270%200%2017.828%2018.078%27%3E%3Cg%20transform%3D%27translate%2816263.414%205664.755%29%27%3E%3Cline%20y1%3D%2715.25%27%20x2%3D%2715%27%20transform%3D%27translate%28-16262%20-5663.341%29%27%20fill%3D%27none%27%20stroke%3D%27%2307122d%27%20stroke-linecap%3D%27round%27%20stroke-width%3D%272%27%2F%3E%3Cline%20x1%3D%2715%27%20y1%3D%2715.25%27%20transform%3D%27translate%28-16262%20-5663.341%29%27%20fill%3D%27none%27%20stroke%3D%27%2307122d%27%20stroke-linecap%3D%27round%27%20stroke-width%3D%272%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+            background-size: 1.25rem;
+        }
+
+        &:focus{
+            box-shadow: none;
+        }
+
+        &:focus-visible{
+            box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+        }
+
+        &-icon{
+            background-size: 1.5rem;
+        }
+    }    
+
+    &__link{
+        font-size: 1rem;
+        text-decoration: none;
+        color: $black;
+        position: relative;
+        margin-right: 2rem;
+
+        &--precedent{
+            &::before{
+                content: '';
+                display: inline-block;
+                height: 1.125em;
+                width: 1.125em;
+                vertical-align: middle;       
+                background: url('./img/icon/icon-search.svg') center center no-repeat;
+                background-size: contain;
+                margin-right: 0.65em;
+            }
+        }
+
+        &:last-of-type{
+            margin-right: 0;
+
+            &::after{
+                content: none;
+            }
+        }
+
+        &:hover,
+        &:focus{
+            text-decoration: underline;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            height: 2.25rem;
+            width: 1px;
+            background: #C1C9D1;
+            position: absolute;
+            right: -1.25rem;
+            top: calc(50% - 1.125rem);
+        }        
+    }
+    
+    &__util{
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    &__mobile-links{
+        display: grid;
+        gap: $spacer*0.5;
+        justify-content: flex-start;
+        padding: $spacer*1.5 $spacer*1.5;
+        border-bottom: 1px solid $mid-blue;
+
+        a{
+            text-decoration: none;
+            display: block;
+            color: $black;
+            font-size: 1.25rem;
+            padding: 0.35em 0;
+
+            &.precedent::after{
+                content: '';
+                display: inline-block;
+                height: 0.85em;
+                width: 0.85em;
+                vertical-align: middle;       
+                background: url('./img/icon/icon-search.svg') center center no-repeat;
+                background-size: contain;
+                margin-left: 0.65em;
+                position: relative;
+                top: -0.1em;
+            }            
+
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__navigation{
+        width: 100%;
+        background: linear-gradient(to bottom, #FFFFFF, #EBF5FA);
+        overflow: scroll;
+        position: fixed;
+        z-index: 9;
+        box-shadow: 0 0 2.5rem rgba(10,10,10,0.15);
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        .navbar-collapse{
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+            
+            > .btn{
+                margin-top: $spacer;
+                margin-left: $spacer*2;
+            }
+        }
+
+        .navbar-nav{
+            padding: $spacer;
+            padding-top: $spacer*1.75;
+
+            @include media-breakpoint-up(lg) {
+                padding: $spacer*0.5;
+                flex-wrap: wrap;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding: $spacer*0.5 0;
+            }
+        }
+
+        .vt-header__util{
+            padding: $spacer;
+            padding-bottom: $spacer*2;
+        }
+
+    }
+
+}

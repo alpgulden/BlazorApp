@@ -1,0 +1,80 @@
+/*
+To compile, run the following command at the root of the project.
+sass --watch --style=compressed src/scss/main.scss:main.css
+*/
+
+@import './fonts';
+@import './bootstrap';
+@import '../../swiper/swiper.scss';
+
+
+// Components
+@import './components/addresses';
+@import './components/alert';
+@import './components/ballots';
+@import './components/ballot-reports';
+@import './components/buttons';
+@import './components/breadcrumb';
+@import './components/case-banner';
+@import './components/case-updates';
+@import './components/case-search';
+@import './components/claims-search-results';
+@import './components/dates-deadlines';
+@import './components/debtors';
+@import './components/docket';
+@import './components/documents';
+@import './components/nav-pills';
+@import './components/header';
+@import './components/footer';
+@import './components/home-hero';
+@import './components/multiselect';
+@import './components/accordion';
+@import './components/forms';
+@import './components/bottom-banner';
+@import './components/social';
+@import './components/sidebar';
+@import './components/secondary-nav';
+@import './components/sticky-table';
+@import './components/menu';
+//@import './components/page-hero';
+//@import './components/case-timeline';
+//@import './components/simple-form';
+//@import './components/stepped-form';
+@import './components/quick-links';
+@import './components/industry-links';
+@import './components/updates';
+@import './components/wysiwyg-block';
+@import './components/pagination';
+
+// Layout
+@import './layout/content';
+@import './layout/claims-register';
+@import './layout/epoc';
+@import './layout/precedent-search';
+@import './layout/search-results';
+@import './layout/sign-in';
+@import './layout/terms';
+@import './layout/case-selection';
+@import './layout/eballot';
+@import './layout/contact';
+
+
+// CSS Variables
+:root {
+    --vt-section-spacer: 2rem;
+
+    @include media-breakpoint-up(md) {
+        --vt-section-spacer: 3rem;
+    }
+}
+
+html{
+    &.disable-scroll{
+        overflow: hidden;
+    }
+}
+
+.container--inner{
+    max-width: 1200px;
+    margin: 0 auto;
+}

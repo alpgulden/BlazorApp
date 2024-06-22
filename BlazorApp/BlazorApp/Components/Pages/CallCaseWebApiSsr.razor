@@ -1,0 +1,156 @@
+@page "/call-case-web-api-ssr"
+@rendermode InteractiveServer
+@using BlazorApp.Client.Models
+@using BlazorApp.Client.Services
+@implements IDisposable
+@inject PersistentComponentState ApplicationState
+@inject ICaseService CaseService
+
+<PageTitle>Call Case web API (SSR)</PageTitle>
+
+<h1>Call Case web API Example (SSR)</h1>
+
+@if (cases == null)
+{
+    <p>No cases found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    <label>
+                        Watched
+                        <input type="checkbox" @bind="getWatchedCases" @bind:after="GetCases" />
+                    </label>
+                </th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="editRow" style="display:@editRowStyle">
+                <td class="text-center">
+                    <input type="checkbox" @bind="editCase.IsWatched" />
+                </td>
+                <td>
+                    <input @bind="editCase.Name" />
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-success" @onclick="SaveCase">
+                        Save
+                    </button>
+                    <button class="btn btn-danger"
+                            @onclick="@(() => editRowStyle = "none")">
+                        Cancel
+                    </button>
+                </td>
+            </tr>
+            @foreach (var _case in cases)
+            {
+                <tr>
+                    <td class="text-center">
+                        @if (_case.IsWatched)
+                        {
+                            <span>✔</span>
+                        }
+                    </td>
+                    <td>@case.Name</td>
+                    <td class="text-center">
+                        <button class="btn btn-warning" @onclick="@(() => EditCase(case.Id))">
+                            Edit
+                        </button>
+                        <button class="btn btn-danger" @onclick="@(async () => await DeleteCase(case.Id))">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+            <tr id="addRow">
+                <td></td>
+                <td>
+                    <input @bind="newCaseName" placeholder="New Case" />
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-success" @onclick="AddCase">Add</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+@code {
+    private Case editCase = new();
+    private string editRowStyle = "none";
+    private string? newCaseName;
+    private Case[]? cases;
+    private bool getWatchedCases;
+    private PersistingComponentStateSubscription persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        persistingSubscription = ApplicationState.RegisterOnPersisting(PersistData);
+
+        if (!ApplicationState.TryTakeFromJson<Case[]>(nameof(cases), out var restoredData))
+        {
+            await GetCases();
+        }
+        else
+        {
+            cases = restoredData!;
+        }
+    }
+
+    private async Task GetCases()
+    {
+        cases = await CaseService.GetCasesAsync(getWatchedCases) ?? Array.Empty<Case>();
+    }
+
+    private Task PersistData()
+    {
+        ApplicationState.PersistAsJson(nameof(cases), cases);
+
+        return Task.CompletedTask;
+    }
+
+    private void EditCase(long id)
+    {
+        if (cases is not null)
+        {
+            editCase = cases.Single(i => i.Id == id);
+            editRowStyle = "table-row";
+        }
+    }
+
+    private async Task AddCase()
+    {
+        if (!string.IsNullOrEmpty(newCaseName))
+        {
+            var addCase = new Case { Name = newCaseName, IsWatched = false };
+            await CaseService.PostCaseAsync(addCase);
+            newCaseName = string.Empty;
+            await GetCases();
+            editRowStyle = "none";
+        }
+    }
+
+    private async Task SaveCase()
+    {
+        if (editCase is not null)
+        {
+            await CaseService.PutCaseAsync(editCase.Id, editCase);
+        }
+        await GetCases();
+        editRowStyle = "none";
+    }
+
+    private async Task DeleteCase(long id)
+    {
+        await CaseService.DeleteCaseAsync(id);
+        await GetCases();
+        editRowStyle = "none";
+    }
+
+    void IDisposable.Dispose() => persistingSubscription.Dispose();
+}

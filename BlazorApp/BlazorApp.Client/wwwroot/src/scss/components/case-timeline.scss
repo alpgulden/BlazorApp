@@ -1,0 +1,208 @@
+.vt-case-timeline{
+    margin-bottom: var(--vt-section-spacer);    
+
+
+    &__inner{
+        border: 1px solid $light-blue;
+        border-radius: 0.5rem;
+    }
+
+    &__heading{
+        border-bottom: 1px solid #EDF2FD;
+        padding: $spacer;
+
+        @include media-breakpoint-up(lg) {
+            padding: $spacer*1.5 $spacer*2;
+        }
+    }
+
+    &__nav{
+        padding: $spacer;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+            padding: $spacer $spacer*2;
+        }        
+
+        &.has-overflow{
+            .swiper-slide{
+                width: 100%;
+                padding: 0 1rem;
+            }
+
+            .nav-pill{
+                background: none !important;
+                margin-right: 0 !important;
+                padding: 0 .5em !important;
+                text-align: center;
+                white-space: initial;
+                border: none;
+
+                span{
+                    white-space: nowrap;
+                }
+
+                &::before{
+                    display: grid;
+                    margin: 0 auto;
+                    margin-bottom: 5px;
+                }
+
+                &::after{
+                    content: none !important;
+                }
+            }
+        }
+        
+        &:not(.has-overflow){
+            .vt-case-timeline__button{
+                display: none;
+            }
+
+            .vt-case-timeline__status{
+                margin: 0;
+            }
+
+            .nav-pill{
+                cursor: pointer;
+            }
+        }
+    }
+    
+    &__status{
+        width: 100%;
+        position: relative;
+        min-width: 1px;
+        overflow: hidden;
+        
+        .nav-pills{
+            overflow: visible;
+            padding-bottom: 0.1rem;
+        }
+
+        .nav-pill{
+            margin-right: 2.5rem !important;
+            border: 1px solid #EFEFEF;
+            transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+            &--active,
+            &:hover,
+            &:focus{
+                border-color: $blue;
+                background: #F4F7FD;
+            }
+            
+
+            &::after{
+                content: 'chevron_right' !important;
+            }
+        }
+
+        .swiper-slide{
+            width: auto;
+
+            &.swiper-slide-active .nav-pill{
+                //@extend .nav-pill--active;
+            }
+
+            &:last-child .nav-pill{
+                margin-right: 0 !important;
+    
+                &::after{
+                    content: none !important;
+                }
+            }
+        }
+
+    }
+
+    &__button{
+        height: 2rem;
+        width: 2rem;
+        left: calc(100% - 2rem);
+        position: relative;
+        z-index: 3;
+        padding: 0;
+        appearance: none;
+        background: none;
+        border: none;
+        transition: opacity 0.2s ease-in-out;
+
+        &::before,
+        &::after{
+            left: 0;
+        }
+
+        &:first-of-type::after{
+            transform: none;
+        }
+
+        &.swiper-button-disabled{
+            pointer-events: none;
+            opacity: 0.4;
+            filter: saturate(0);
+        }
+    }
+
+    &__slides{
+        padding: $spacer*0.75;
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+            padding: $spacer*1.5;
+            padding-top: $spacer*0.75;
+        }
+    }
+
+    .timeline-slide{
+        border: 1px solid $light-blue;
+        background: linear-gradient(to bottom right, #FFFFFF, #EBF5FA);
+        border-radius: 0.5rem;
+        padding: $spacer;
+        display: grid;
+        gap: $spacer*2.5;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 18rem;
+            align-items: center;
+            padding: $spacer*1.5;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr auto;
+        }
+
+        @include media-breakpoint-up(xl) {
+            gap: $spacer*3;
+        }
+
+        &__content{
+            font-weight: 300;
+
+            h1,h2,h3,h4,h5,
+            .display-1, .display-2, .display-3, .display-4, .display-5{
+                margin-bottom: 1em;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: $spacer*1 $spacer*2;
+            }
+
+            *:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &__image{
+            picture,
+            img{
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                border-radius: 0.4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.vt-industry-links {
+    list-style: none;
+    padding-inline-start: 0;
+
+    li { margin-bottom: $spacer*0.5; }
+}
+
+.link-external {
+    text-decoration: none;
+    font-weight: 600;
+    color: $darker-blue;
+
+    &:hover,
+    &:focus{
+        text-decoration: underline;
+    }
+
+    &::after{
+        font-family: $font-icon;
+        content: 'open_in_new';
+        display: inline-block;
+        color: currentColor;
+        font-size: 1.35em;
+        font-weight: 300;
+        line-height: 0.1;
+        position: relative;
+        top: 0.25em;
+        margin-left: 0.2em;
+    }
+}

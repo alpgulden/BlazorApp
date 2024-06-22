@@ -1,0 +1,46 @@
+.vt-multiselect{
+    max-width: 32rem;
+
+    legend{
+        @extend .form-label;
+        font-size: 1rem;
+    }
+
+    &__fields{
+        border-radius: 0.3rem;
+        border: 1px solid #ccd3e2;
+        background: $white;
+        overflow-y: auto;
+        height: 10rem;
+
+        &:focus-within{
+            box-shadow: 0 0 0 0.12rem rgba(75,193,255,.4);
+            border-color: rgba(75,193,255,.4);
+        }
+
+        label,
+        span{
+            display: block;
+        }
+        
+        span{
+            font-weight: 300;
+            padding: 0.4rem 0.8rem;
+            background: $white;
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        input{
+            @extend .visually-hidden;
+
+            &:focus + span{
+                background-color: $lighter-blue;
+            }
+
+            &:checked + span{
+                font-weight: 500;
+                background: $light-blue;
+            }
+        }
+    }
+}

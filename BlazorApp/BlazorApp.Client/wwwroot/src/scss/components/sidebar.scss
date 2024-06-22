@@ -1,0 +1,52 @@
+.vt-sidebar{
+    padding: $spacer;
+    padding-right: 0;
+    position: sticky;
+    top: 81px;
+    max-height: calc(100vh - 5rem);
+    flex-direction: column;
+    display: none;
+    
+    
+    @include media-breakpoint-up(lg) {
+        display: flex;
+    }
+
+    /*
+    &::before{
+        content: '';
+        display: block;
+        height: calc(100vh - 6.25rem);
+        position: absolute;
+        width: 100vw;
+        max-width: 90.5rem;
+        left: 0;
+        top: $spacer*-1;
+        background: linear-gradient(to bottom right, #FFFFFF 20%, #D1E5F0 40%);
+        z-index: -1;
+        border-radius: 0 0 1rem 1rem;
+    }    
+    */
+
+    &::before{
+        content: '';
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        left: 0;
+        background: linear-gradient(to bottom right, #FFFFFF 20%, #D1E5F0 50%);
+        z-index: -1;
+    }        
+
+    &__cta{
+        padding-bottom: $spacer;
+    }
+
+    &__nav{
+        overflow: auto;
+        padding-right: $spacer*1.5;
+    }
+}
